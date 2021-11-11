@@ -1,3 +1,5 @@
 # AlexAguado_Programacion
 
-##Cambio realizado en el repositorio local
+##Cambio local
+
+###Cambio desde repositorio de red
