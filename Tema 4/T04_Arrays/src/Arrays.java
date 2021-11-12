@@ -11,8 +11,46 @@ public class Arrays {
         //System.out.println(longitudArray);
         //System.out.println(numerosDos[9]);
 
-        for (int i = 0; i <= numerosDos.length -1; i++) {
+
+        for (int i = 0; i < numerosDos.length; i++) {
             System.out.println(numerosDos[i]);
         }
+
+        numerosDos[7] = 88;
+
+        System.out.println("Modifico alguna posicion");
+
+
+        for (int i = 0; i < numerosDos.length; i++) {
+            System.out.println(numerosDos[i]);
+        }
+
+        //Ejercio 1 Array
+
+        int[] nuevaPosicion = new int [15];
+
+        System.out.println("Modifico posiciones");
+
+        for (int y = 0; y < nuevaPosicion.length; y++) {
+            nuevaPosicion[y]= (int) (Math.random()*50 + 1);
+            System.out.println(nuevaPosicion[y]);
+        }
+
+        System.out.println("Par o Impar");
+        int numeroPar=0, numeroImpar=0;
+        for (int i = 0; i < 15; i++) {
+            if (nuevaPosicion[i] %2==0) {
+                numeroPar++;
+            } else {
+                numeroImpar++;
+            }
+
+        }
+
+
+
+
     }
+
+    //meter en un array de 15 posiciones 15 numeros aleatorios entre 0 y 50
 }
