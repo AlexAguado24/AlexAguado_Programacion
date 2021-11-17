@@ -35,7 +35,7 @@ public class Ejercicio7 {
                 break;
 
             case 2:
-                
+
                 break;
 
         }
