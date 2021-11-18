@@ -27,6 +27,12 @@ public class MultiplicarArray {
         System.out.printf("La media de todos los numeros es %.2f%n", media);
     }
 }
+
+//for (int i = 0; i <numeros.length; i++){
+    //numeros[i]= numeros[i] * 2; - para multiplicar los elementos con un for normal
+    //}
+// for (int item: numeros)
+    //system.out.println(item)- para sacar los elementos por consola
 //(MultiplicarArray) Crear un array de 5 posiciones:
 //
 //se le pedirá al usuario que introduzca cada unos de los elementos del array
