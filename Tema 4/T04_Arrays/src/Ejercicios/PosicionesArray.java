@@ -14,20 +14,21 @@ public class PosicionesArray {
 
         numeros = new int[longitud];
 
-        for (int i = 0; i < longitud; i++) {
+        for (int i = 0; i < numeros.length; i++) {
             System.out.println("Introduce un elemento del Array");
             numeros[i] = in.nextInt();
         }
         int ultimo = numeros[numeros.length-1];
-        int primero = numeros[0];
+        //int primero = numeros[0];
 
-        for (int i = numeros.length; i > 0; i--) {
-            numeros[i] = numeros[i - 1];
+        for (int i = 0; i < numeros.length-1; i++) {
+            numeros[i] = numeros[i + 1];
         }
-        numeros[numeros.length-1]= primero;
+        numeros[0]= ultimo;
         for (int item: numeros) {
             System.out.print(item);
         }
+        in.close();
     }
 }
 //(PosicionesArray) Crea una aplicación que:
