@@ -21,8 +21,7 @@ public class OperacionesArray {
         for (int i = 0; i < array.length; i++) {
             if (i == 0) {
                 array[i] +=1;
-            }
-            if (i % 2 == 0) {
+            } else if (i % 2 == 0) {
                 array[i] += 1;
             } else {
                 array[i] -= 1;
