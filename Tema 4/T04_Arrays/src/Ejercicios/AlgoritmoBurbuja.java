@@ -37,6 +37,7 @@ public class AlgoritmoBurbuja {
         for (int i = prueba.length-1; i >=0 ; i--) {
             System.out.print(prueba[i]);
         }
+        System.out.println("");
         in.close();
     }
 }
