@@ -26,12 +26,15 @@ public class OperacionesArray {
             } else {
                 array[i] -= 1;
             }
-
             System.out.print(array[i] +" ");
         }
+        System.out.println("");
 
         for (int i = 0; i < array.length; i++) {
-
+            if (array[i] < 5) {
+                array[i] *= 2;
+            }
+            System.out.print(array[i] + " ");
         }
     }
 }
