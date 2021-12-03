@@ -19,7 +19,7 @@ public class ChampionArray {
                     
                 }
             }
-            //System.out.println(bomboUno[aleatorioUno]+ "-" +bomboDos[aleatorioDos]);
+            System.out.println(bomboUno[aleatorioUno]+ " - " +bomboDos[aleatorioDos]);
 
         }
     }
