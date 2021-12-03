@@ -3,10 +3,9 @@ package Ejercicios;
 public class Ejercicio1 {
     public static void main(String[] args) {
         int[] numeros = new int[5];
-        int min = 10, max = 50;
 
         for (int i = 0; i < numeros.length; i++) {
-            int num = (int) (Math.random()* (max - min + 1) + min);
+            int num = (int) (Math.random()* (50 - 10+ 1) + 10);
             numeros[i] = num;
         }
         for (int generados : numeros) {
