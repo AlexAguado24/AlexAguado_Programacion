@@ -10,13 +10,13 @@ public class ChampionArray {
 
         for (int i = 0; i < bomboDos.length; i++) {
             int aleatorioUno = (int) (Math.random()* bomboUno.length);
-            int aleatorioDos = (int) (Math.random()* bomboUno.length);
+            int aleatorioDos = (int) (Math.random()* bomboDos.length);
             String equipoGenerado1 = bomboUno[aleatorioUno];
             String equipoGenerado2 = bomboDos[aleatorioDos];
 
             for (int x = 0;x< equiposSalidosB1.length;x++){
                 if (equipoGenerado1.equalsIgnoreCase(equiposSalidosB1[i])) {
-                    
+
                 }
             }
             System.out.println(bomboUno[aleatorioUno]+ " - " +bomboDos[aleatorioDos]);
