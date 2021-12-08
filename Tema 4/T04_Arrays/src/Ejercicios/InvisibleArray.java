@@ -26,8 +26,8 @@ public class InvisibleArray {
             String participanteGenerado = nombres[participanteAleatorio];
 
             for (int x = 0; x < participantesSalidos.length; x++) {
-                if (participanteGenerado.equalsIgnoreCase(participantesSalidos[i])) {
-                    
+                if (participanteGenerado.equalsIgnoreCase(participantesSalidos[x])) {
+
                 }
             }
         }
