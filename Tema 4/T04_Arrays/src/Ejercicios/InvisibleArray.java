@@ -27,8 +27,14 @@ public class InvisibleArray {
 
             for (int x = 0; x < participantesSalidos.length; x++) {
                 if (participanteGenerado.equalsIgnoreCase(participantesSalidos[x])) {
-
+                    participanteAleatorio = (int) (Math.random() * nombres.length);
                 }
+            }
+            if (i%2!=0) {
+                System.out.print("Las parejas van a ser " + nombres[participanteAleatorio]);
+                System.out.println(nombres[participanteAleatorio]);
+            } else {
+                System.out.println();
             }
         }
     }
