@@ -16,11 +16,13 @@ public class ChampionArray {
 
             for (int x = 0;x< equiposSalidosB1.length;x++){
                 if (equipoGenerado1.equalsIgnoreCase(equiposSalidosB1[i])) {
-
+                    aleatorioUno = (int) (Math.random()*bomboUno.length);
+                } 
+                if (equipoGenerado2.equalsIgnoreCase(equiposSalidosB2[i])) {
+                    aleatorioDos = (int) (Math.random()* bomboDos.length);
                 }
             }
             System.out.println(bomboUno[aleatorioUno]+ " - " +bomboDos[aleatorioDos]);
-
         }
     }
 }
