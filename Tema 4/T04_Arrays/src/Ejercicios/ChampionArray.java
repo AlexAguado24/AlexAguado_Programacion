@@ -10,7 +10,7 @@ public class ChampionArray {
 
         for (int i = 0; i < bomboDos.length; i++) {
             int aleatorioUno = (int) (Math.random()* bomboUno.length);
-            int aleatorioDos = (int) (Math.random()* bomboUno.length);
+            int aleatorioDos = (int) (Math.random()* bomboDos.length);
             String equipoGenerado1 = bomboUno[aleatorioUno];
             String equipoGenerado2 = bomboDos[aleatorioDos];
 
@@ -19,7 +19,7 @@ public class ChampionArray {
 
                 }
             }
-            //System.out.println(bomboUno[aleatorioUno]+ "-" +bomboDos[aleatorioDos]);
+            System.out.println(bomboUno[aleatorioUno]+ " - " +bomboDos[aleatorioDos]);
 
         }
     }
