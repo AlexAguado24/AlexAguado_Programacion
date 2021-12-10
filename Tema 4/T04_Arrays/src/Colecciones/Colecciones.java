@@ -2,6 +2,7 @@ package Colecciones;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 public class Colecciones {
     public static void main(String[] args) {
@@ -31,7 +32,6 @@ public class Colecciones {
         listaCosas.add(6);
         listaCosas.add("taco");
         listaCosas.add(6);
-        listaCosas.add("paco");
         listaCosas.add(6);
         listaCosas.add(100);
         listaCosas.add(6);
@@ -101,6 +101,21 @@ public class Colecciones {
                 listaCosas.remove(i);
             }
         }
+        /*for (int i = 0; i < listaCosas.size(); i++) {
+            if (listaCosas.get(i)instanceof Integer) {
+                //solo lo quiero cuando sea un numero
+                if (((int) listaCosas.get(i)) == 6) {
+                    listaCosas.remove(i);
+                }
+            }
+        }*/
+        //como borrar con un removeIf (interfaz).
+        listaCosas.removeIf(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer o) {
+                return o.equals(6);
+            }
+        });
         System.out.println(listaCosas);
         in.close();
     }
