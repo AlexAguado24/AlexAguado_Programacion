@@ -12,6 +12,7 @@ public class Ejercicio3 {
         alumnos.add("Angel");
         alumnos.add("Jorge");
         alumnos.add("Marcos");
+        System.out.println(alumnos);
 
         int aleatorio = (int)(Math.random()*alumnos.size());
         System.out.println(alumnos.get(aleatorio));

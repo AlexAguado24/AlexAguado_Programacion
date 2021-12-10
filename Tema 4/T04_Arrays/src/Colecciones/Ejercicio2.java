@@ -2,21 +2,23 @@ package Colecciones;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
         ArrayList<Integer> listaNumeros = new ArrayList<>();
-
-        listaNumeros.add((int) (Math.random()*100+1));
-        listaNumeros.add((int) (Math.random()*100+1));
-        listaNumeros.add((int) (Math.random()*100+1));
-        listaNumeros.add((int) (Math.random()*100+1));
-        listaNumeros.add((int) (Math.random()*100+1));
-
+        Scanner in = new Scanner(System.in);
         System.out.println(listaNumeros);
 
-        int suma = 0, max = -99999, min = 99999;
+        int suma = 0, max = -99999, min = 99999, numTeclado;
         double media = 0.0;
+
+        System.out.println("Introduce la longitud del array:");
+        numTeclado = in.nextInt();
+        for (int i = 0; i < numTeclado; i++) {
+            listaNumeros.add((int)(Math.random()*101));
+        }
+        System.out.println(listaNumeros);
 
         for (Integer item:listaNumeros) {
             suma += item;
@@ -33,7 +35,7 @@ public class Ejercicio2 {
 
         media = (double)suma / (double) listaNumeros.size();
         System.out.println("La suma es igual a "+suma);
-        System.out.println("La media es igual a "+media);
+        System.out.printf("La media es igual a %.2f%n ",media);
         System.out.println("El numero maximo es "+max);
         System.out.println("El numero minimo es "+min);
 
