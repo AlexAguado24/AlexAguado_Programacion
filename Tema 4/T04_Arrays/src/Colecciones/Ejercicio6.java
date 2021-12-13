@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
     public static void main(String[] args) {
-        ArrayList listaCoches = new ArrayList();
+        /*ArrayList<Object[]> listaCoches = new ArrayList<Object[]>();
         Scanner in = new Scanner(System.in);
         Object[] coche1 = new Object[3];
         Object[] coche2 = new Object[3];
@@ -62,8 +62,10 @@ public class Ejercicio6 {
             System.out.println(item);
         }
         System.out.println(listaCoches);
-        in.close();
+        in.close();*/
     }
+
+
 }
 //Crea un programa que permita meter una lista de coches, donde cada coche consta de marca (String), modelo (String) y caballos (int).
 // Mete tres coches manualmente
