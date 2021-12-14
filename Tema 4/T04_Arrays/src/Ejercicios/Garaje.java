@@ -22,17 +22,21 @@ public class Garaje {
 
             switch (opcion) {
                 case 1:
-                    String marca, modelo, matricula="";
-                    int coste;
-                    System.out.println("Introduce la marca del coche");
-                    marca = in.next();
-                    System.out.println("Introduce el modelo del coche");
-                    modelo = in.next();
-                    System.out.println("Introduce el coste de reparacion");
-                    coste = in.nextInt();
-                    System.out.println("Introduce la matricula del coche");
-                    matricula = in.next();
-                    garaje.add(new Object[]{marca,modelo,coste,matricula});
+                    if (garaje.size()<=10) {
+                        String marca, modelo, matricula = "";
+                        int coste;
+                        System.out.println("Introduce la marca del coche");
+                        marca = in.next();
+                        System.out.println("Introduce el modelo del coche");
+                        modelo = in.next();
+                        System.out.println("Introduce el coste de reparacion");
+                        coste = in.nextInt();
+                        System.out.println("Introduce la matricula del coche");
+                        matricula = in.next();
+                        garaje.add(new Object[]{marca, modelo, coste, matricula});
+                    } else {
+                        System.out.println("Garaje lleno, espere a que salga algun coche.");
+                    }
                     break;
                 case 2:
                     if (garaje.size()!=0) {
@@ -47,17 +51,59 @@ public class Garaje {
                     }
                     break;
                 case 3:
-                    System.out.println("Introduce la matricula del coche que quieres buscar");
-                    String cocheBuscar = in.next();
-                    if (matricula.) {
-
+                    if (garaje.size()!=0) {
+                        System.out.println("Introduce la matricula del coche que quieres buscar");
+                        String cocheBuscar = in.next();
+                        for (Object[] coche : garaje) {
+                            if (coche[3].equals(cocheBuscar)) {
+                                for (Object item : coche) {
+                                    System.out.print(item +"\t");
+                                }
+                                System.out.println();
+                            } else {
+                                System.out.println("No hay ningun coche con esa matricula");
+                            }
+                        }
+                    } else {
+                        System.out.println("Aun no hay coches en el garaje");
                     }
                     break;
                 case 4:
+                    if (garaje.size()!=0) {
+                        int costeTotal=0;
+                        for (Object[] coche :garaje) {
+                            costeTotal += (int)coche[2];
+                        }
+                        System.out.println(costeTotal);
+                    } else {
+                        System.out.println("Aun no hay coches en el garaje");
+                    }
                     break;
                 case 5:
+                    if (garaje.size()!=0) {
+                        System.out.println("Introduce la matricula del coche que quieres buscar");
+                        String borrarCoche = in.next();
+                        for (int i = 0; i < garaje.size(); i++) {
+                            Object[] cocheActual = garaje.get(i);
+                            for (int j = 0; j < cocheActual.length; j++) {
+                                if (borrarCoche.equals(cocheActual[j])) {
+                                    garaje.remove(cocheActual);
+                                    System.out.println("Coche borrado");
+                                } else {
+                                    System.out.println("Matricula no encontrada");
+                                }
+                            }
+                        }
+                    } else {
+                        System.out.println("Aun no hay coches en el garaje");
+                    }
                     break;
                 case 6:
+                    if (garaje.size()!=0) {
+                        garaje.clear();
+                    } else {
+                        System.out.println("Aun no hay coches en el garaje");
+                    }
                     break;
             }
         }while (opcion >0);
