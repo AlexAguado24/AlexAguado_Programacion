@@ -22,7 +22,7 @@ public class Garaje {
 
             switch (opcion) {
                 case 1:
-                    if (garaje.size() <= 10) {
+                    if (garaje.size() < 10) {
                         String marca, modelo, matricula = "";
                         int coste;
                         System.out.println("Introduce la marca del coche");
@@ -53,9 +53,21 @@ public class Garaje {
                 case 3:
                     if (garaje.size() > 0) {
                         System.out.println("Introduce la matricula del coche que quieres buscar");
-                        String cocheBuscar = in.next();
-                        for (Object[] coche : garaje) {
-                            if (coche[3].equals(cocheBuscar)) {
+                        String matricula = in.next();
+                        boolean encontrado = false;
+
+                        for (Object[] coche:garaje) {
+                            if (coche[3].toString().equalsIgnoreCase(matricula)) {
+                                encontrado = true;
+                                System.out.println("Matricula "+coche[0]+ "\tmarca"+ coche[1]+"\tcoste"+coche[2]+"\tmatricula"+coche[3]);
+                                break;
+                            }
+                        }
+                        if (!encontrado) {
+                            System.out.println("Matricula no encontrada");
+                        }
+                        /*for (Object[] coche : garaje) {
+                            if (coche[3].toString().equalsIgnoreCase(cocheBuscar)) {
 
                                 for (Object item : coche) {
                                     System.out.print(item +"\t");
@@ -65,7 +77,7 @@ public class Garaje {
                             if (cocheBuscar != coche[3]) {
                                 System.out.println("No hay ningun coche con esa matricula");
                             }
-                        }
+                        }*/
                     } else {
                         System.out.println("Aun no hay coches en el garaje");
                     }
@@ -85,8 +97,15 @@ public class Garaje {
                     if (garaje.size() > 0) {
                         System.out.println("Introduce la matricula del coche que quieres buscar");
                         String borrarCoche = in.next();
+                        boolean encontrado = false;
                         for (int i = 0; i < garaje.size(); i++) {
-                            Object[] cocheActual = garaje.get(i);
+                            if (garaje.get(i)[2].toString().equalsIgnoreCase(borrarCoche)) {
+                                System.out.println("Coche borrado");
+                                encontrado=true;
+                                garaje.remove(i);
+                                break;
+                            }
+                            /*Object[] cocheActual = garaje.get(i);
                             for (int j = 0; j < cocheActual.length; j++) {
                                 if (borrarCoche.equals(cocheActual[j])) {
                                     garaje.remove(cocheActual);
@@ -95,7 +114,10 @@ public class Garaje {
                                 if (borrarCoche != cocheActual[j]) {
                                     System.out.println("Matricula no encontrada");
                                 }
-                            }
+                            }*/
+                        }
+                        if (!encontrado) {
+                            System.out.println("Coche no encontrado");
                         }
                     } else {
                         System.out.println("Aun no hay coches en el garaje");
@@ -104,6 +126,7 @@ public class Garaje {
                 case 6:
                     if (garaje.size() > 0) {
                         garaje.clear();
+                        System.out.println("Garaje vaciado");
                     } else {
                         System.out.println("Aun no hay coches en el garaje");
                     }

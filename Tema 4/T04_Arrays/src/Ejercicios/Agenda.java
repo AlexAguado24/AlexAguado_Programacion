@@ -7,8 +7,8 @@ public class Agenda {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         ArrayList<Object[]> agenda = new ArrayList<>();
-        int opcion, telefono;
-        String nombre, apellido, dni;
+        int opcion;
+
         do {
             System.out.println("1. Agregar persona");
             System.out.println("2. Buscar persona");
@@ -19,27 +19,96 @@ public class Agenda {
 
             switch (opcion) {
                 case 1:
+
                     System.out.println("Agregando una persona");
                     System.out.println("Introduce su nombre:");
-                    nombre = in.next();
+                    String nombre = in.next();
                     System.out.println("Introduce su apellido:");
-                    apellido = in.next();
-                    System.out.println("Introduce su numero de telefono");
-                    telefono = in.nextInt();
-                    System.out.println("Introduce su DNI");
-                    dni = in.next();
-                    agenda.add(new Object[]{nombre,apellido,telefono,dni});
+                    String apellido = in.next();
+                    System.out.println("Introduce su numero de telefono:");
+                    int telefono = in.nextInt();
+                    System.out.println("Introduce su DNI:");
+                    String dni = in.next();
+                    boolean existe = false;
+                    for (Object[] persona : agenda) {
+                        if (persona[3].toString().equalsIgnoreCase(dni)) {
+                            existe = true;
+                            System.out.println("La persona que intentas guardar ya existe y sus datos son," +
+                                    " Nombre: " + persona[0]
+                                    + "\t Apellido: " + persona[1]
+                                    + "\t Telefono: " + persona[2]
+                                    + "\t DNI: " + persona[3]);
+                            break;
+                        }
+                    }
+                    if (!existe) {
+                        agenda.add(new Object[]{nombre, apellido, telefono, dni});
+                        System.out.println("Persona añadida a la lista");
+                    }
+
                     break;
                 case 2:
+
                     if (agenda.size() > 0) {
 
+                        System.out.println("Introduce el dni de la persona que quieres buscar");
+                        dni = in.next();
+                        boolean encontrado = false;
+
+                        for (Object[] persona : agenda) {
+
+                            if (persona[3].toString().equalsIgnoreCase(dni)) {
+                                encontrado = true;
+                                System.out.println("Nombre: " + persona[0]
+                                        + "\tApellido: " + persona[1]
+                                        + "\tTelefono: " + persona[2]
+                                        + "\tDNI: " + persona[3]);
+                                break;
+                            }
+                        }
+                        if (!encontrado) {
+                            System.out.println("La persona no esta en la lista");
+                        }
                     } else {
                         System.out.println("Aun no hay personas guardadas");
                     }
                     break;
                 case 3:
+                    if (agenda.size() > 0) {
+                        System.out.println("Introduce el DNI de la persona que quieres borrar");
+                        dni = in.next();
+                        boolean encontrado = false;
+                        for (int i = 0; i < agenda.size(); i++) {
+                            if (agenda.get(i)[3].toString().equalsIgnoreCase(dni)) {
+                                encontrado = true;
+                                System.out.println("Persona borrada de la agenda");
+                                agenda.remove(i);
+                                break;
+                            }
+                        }
+                        if (!encontrado) {
+                            System.out.println("La persona no esta en la lista");
+                        }
+                    } else {
+                        System.out.println("Aun no hay personas guardadas");
+                    }
                     break;
                 case 4:
+                    if (agenda.size() > 0) {
+                        for (Object[] persona : agenda) {
+
+                            System.out.println("Nombre: " + persona[0]
+                                    + "\tApellido: " + persona[1]
+                                    + "\tTelefono: " + persona[2]
+                                    + "\tDNI: " + persona[3]);
+
+                        }
+                        System.out.println("Listado de personas ejecutado.");
+
+                        break;
+                    } else {
+                        System.out.println("Aun no hay personas en la agenda");
+                    }
                     break;
             }
 
