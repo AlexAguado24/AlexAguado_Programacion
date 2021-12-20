@@ -51,6 +51,7 @@ public class Garaje {
                     }
                     break;
                 case 3:
+<<<<<<< Updated upstream
                     if (garaje.size() > 0) {
                         System.out.println("Introduce la matricula del coche que quieres buscar");
                         String matricula = in.next();
@@ -80,6 +81,14 @@ public class Garaje {
                         }*/
                     } else {
                         System.out.println("Aun no hay coches en el garaje");
+=======
+                    System.out.println("Introduce la matricula del coche que quieres buscar");
+                    String cocheBuscar = in.next();
+                    for (Object[] coche:garaje) {
+                        if (coche[3].equals(cocheBuscar)) {
+                            
+                        }
+>>>>>>> Stashed changes
                     }
                     break;
                 case 4:
