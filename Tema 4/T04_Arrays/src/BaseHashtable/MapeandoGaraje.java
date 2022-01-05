@@ -1,72 +1,89 @@
 package BaseHashtable;
 
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Scanner;
 
 public class MapeandoGaraje {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Hashtable<String,Object[]> garaje = new Hashtable<>();
         int opcion;
-        String marca, modelo, matricula=null;
-        int coste;
+        Hashtable<String, Object[]> garaje = new Hashtable();
 
         do {
-            System.out.println("1. Añadirá un coche");
+            System.out.println("0. Salir del programa");
+            System.out.println("1. Añadir coche");
             System.out.println("2. Listar coches");
-            System.out.println("3. Buscar coches:");
-            System.out.println("4. Mostrar costes:");
-            System.out.println("5. Eliminar coche:");
-            System.out.println("6. Vaciar garaje:");
-            System.out.println("Ejecita una de las opciones");
+            System.out.println("3. Buscar coche");
+            System.out.println("4. Mostrar costes");
+            System.out.println("5. Eliminar coche");
+            System.out.println("6. Vaciar garaje");
+            System.out.println("Elige una de las opciones:");
             opcion = in.nextInt();
 
             switch (opcion) {
                 case 1:
-                    if (garaje.size() <= 10) {
-                        System.out.println("Añadiendo coche:");
+                    if (garaje.size()<=10) {
+                        System.out.println("Añadiendo coche al garaje");
                         System.out.println("Introduce la marca del coche");
-                        marca = in.next();
+                        String marca = in. next();
                         System.out.println("Introduce el modelo del coche");
-                        modelo = in.next();
-                        System.out.println("Introduce el coste de reparacion");
-                        coste = in.nextInt();
+                        String modelo = in.next();
+                        System.out.println("Introduce el coste de la reparacion");
+                        int coste = in.nextInt();
                         System.out.println("Introduce la matricula del coche");
-                        matricula = in.next();
-
-                        garaje.put(matricula, new Object[]{marca, modelo, coste, matricula});
+                        String matricula = in.next();
+                        Object[] coche = new Object[]{marca, modelo, coste, matricula};
+                        garaje.put(coche[3].toString(), coche);
+                        System.out.println("Coche añadido");
                     } else {
-                        System.out.println("Garaje lleno, no caben mas coches");
+                        System.out.println("No hay mas espacio en el garaje");
                     }
                     break;
-
                 case 2:
-                    if (garaje.size() != 0) {
-                        for (Object coche :garaje.get(matricula)) {
-                            System.out.print(coche +"\t");
+                    if (garaje.size() > 0) {
+                        System.out.println("Listando coches");
+                        Enumeration<Object[]> listaDatos = garaje.elements();
+                        while (listaDatos.hasMoreElements()) {
+                            Object[] cocheActual = listaDatos.nextElement();
+                            for (Object item : cocheActual) {
+                                System.out.print(item+"\t");
+                            }
+                            System.out.println();
                         }
-                        System.out.println();
                     } else {
-                        System.out.println("Aun no hay coches que listar");
-                    }
+                        System.out.println("El garaje esta vacio, por favor introduce un coche");
+                }
+
                     break;
                 case 3:
-                    if (garaje.size() != 0) {
-                        System.out.println("Buscando coche:");
-                        System.out.println("Introduce la matricula del coche que quieres buscar");
-                        matricula = in.next();
-                        boolean encontrado = false;
-                        for (Object coche:garaje.get(matricula)) {
-                            if (garaje.get(matricula).toString() ) {
-
+                    if (garaje.size() > 0) {
+                        System.out.println("Buscando coche");
+                        Enumeration<String> listaDatos = garaje.keys();
+                        while (listaDatos.hasMoreElements()) {
+                            String clave = listaDatos.nextElement();
+                            Object[] coche = garaje.get(clave);
+                            for (Object item :coche) {
+                                boolean encontrado = false;
+                                System.out.println("Introduce la matricula del coche que quieres buscar");
+                                String matricula = in.next();
+                                /*if (item[3].toString.equalsIgnoreCase) {
+                                    encontrado = true;
+                                    System.out.print(item +"\t");
+                                }
+                                if (!encontrado){
+                                    System.out.println("El coche que buscas no esta en el garaje");
+                                }*/
                             }
                         }
                     } else {
-                        System.out.println("Aun no hay coches que listar");
+                        System.out.println("El garaje esta vacio, por favor añade un coche");
                     }
                     break;
             }
-        }while (opcion != 0);
+        }
+        while (opcion > 0);
+        in.close();
     }
 }
 ////(Garaje) Desarrollar una aplicación para el control de un garaje.
