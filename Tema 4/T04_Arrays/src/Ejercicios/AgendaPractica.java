@@ -49,13 +49,45 @@ public class AgendaPractica {
                                         "\t Telefono: "+ persona[2]+
                                         "\t DNI: "+ persona[3]);
                             }
-                            System.out.println();
-                            if (!existe) {
-                                System.out.println("La persona que buscas no existe");
-                            }
+                        }
+                        if (!existe) {
+                            System.out.println("La persona que buscas no existe");
                         }
                     } else {
                         System.out.println("La agenda esta vacia, introduce alguna persona antes");
+                    }
+                    break;
+                case 3:
+                    if (agenda.size()>0) {
+                        System.out.println("Borrando Persona");
+                        System.out.println("Introduce el dni de la persona que quieres borrar");
+                        String borrarPersona = in.next();
+                        boolean existe = false;
+                        for (Object[] persona :agenda) {
+                            if (persona[3].toString().equalsIgnoreCase(borrarPersona)) {
+                                existe = true;
+                                agenda.remove(persona);
+                                System.out.println("Persona borrada");
+                            }
+                        }
+                        if (!existe) {
+                            System.out.println("La persona que buscas no existe");
+                        }
+                    } else {
+                        System.out.println("La agenda esta vacia, introduce alguna persona antes");
+                    }
+                    break;
+                case 4:
+                    if (agenda.size()>0) {
+                        System.out.println("Listando Personas");
+                        for (Object[] personas : agenda) {
+                            for (Object item :personas) {
+                                System.out.print(item+"\t");
+                            }
+                            System.out.println();
+                        }
+                    } else {
+                        System.out.println("Agenda vacia, imposible listar personas");
                     }
                     break;
             }
