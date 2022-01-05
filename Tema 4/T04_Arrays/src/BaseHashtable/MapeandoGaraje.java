@@ -1,4 +1,4 @@
-package BaseHashtable;
+/*package BaseHashtable;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -74,7 +74,7 @@ public class MapeandoGaraje {
                                 if (!encontrado){
                                     System.out.println("El coche que buscas no esta en el garaje");
                                 }*/
-                            }
+                            /*}
                         }
                     } else {
                         System.out.println("El garaje esta vacio, por favor añade un coche");
@@ -85,7 +85,7 @@ public class MapeandoGaraje {
         while (opcion > 0);
         in.close();
     }
-}
+}*/
 ////(Garaje) Desarrollar una aplicación para el control de un garaje.
 //// El funcionamiento de la aplicación será desde consola mediante un menú que permita acceder a las diferentes opciones.
 //// Para la aplicación tendremos que tener en cuenta las siguientes cosas:
