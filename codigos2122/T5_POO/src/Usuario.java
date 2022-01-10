@@ -1,7 +1,7 @@
 public class Usuario {
 
     // variables
-    private String correoElectronico, nombre, aèllidos, password, fecha;
+    private String correoElectronico, nombre, apellidos, password, fecha;
     private int edad;
 
 
@@ -40,5 +40,17 @@ public class Usuario {
         this.password = password;
     }
 
+    //hacer los getter y setter en 10 segundos
+
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String aèllidos) {
+        this.apellidos = aèllidos;
+    }
+
+    
 
 }
