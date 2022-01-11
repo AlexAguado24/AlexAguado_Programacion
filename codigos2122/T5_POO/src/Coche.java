@@ -10,7 +10,7 @@ public class Coche {
     }
 
     public Coche(int precio, String matricula, String marca){
-        this.precio = 2000;
+        this.precio = precio;
         this.matricula = matricula;
         this.marca = marca;
     }
