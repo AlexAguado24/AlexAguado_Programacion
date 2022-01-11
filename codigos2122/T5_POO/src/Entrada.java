@@ -11,8 +11,7 @@ public class Entrada {
         Usuario usuario2 = new Usuario();
         // nombre=null, pss=null, correo=null, edad=0, fecha=null
 
-        Usuario usuario3 = new Usuario("Alex", "alex.aguad@gmail.es"
-                ,"pass");
+        Usuario usuario3 = new Usuario("Alex", "alex.aguad@gmail.es","pass");
         // nombre="Alex", pss="pass", correo="alex.aguado@gmail.es", edad=0, fecha=null
 
         Usuario usuario4 = new Usuario("alex.aguad@gmail.es","pass",12);
@@ -23,7 +22,16 @@ public class Entrada {
         // nombre="contraseña", pss=null, correo=null, edad=0, fecha=null
         System.out.println(usuario1.password);*/
 
+        System.out.println(usuario4.getCorreoElectronico());
+        System.out.println(usuario3.getNombre());
         System.out.println(usuario1.getPassword());
+        System.out.println(usuario1.getFecha());
+        System.out.println(usuario4.getEdad());
+        System.out.println();
+
+        usuario3.setNombre("Alejandro");
+        System.out.println(usuario3.getNombre());
+
 
     }
 }

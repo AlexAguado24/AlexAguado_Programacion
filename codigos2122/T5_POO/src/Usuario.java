@@ -30,27 +30,55 @@ public class Usuario {
 
     // metodos getters y setters
 
-    //getter de pass
+    //getters
     public String getPassword(){
         return password;
     }
 
-    //setter del pass
-    public void setPassword(String password){
-        this.password = password;
+    public String getNombre() {
+        return nombre;
     }
-
-    //hacer los getter y setter en 10 segundos
-
 
     public String getApellidos() {
         return apellidos;
     }
 
-    public void setApellidos(String aèllidos) {
-        this.apellidos = aèllidos;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
+    public String getFecha() {
+        return fecha;
+    }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    //setters
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    //hacer los getter y setter en 10 segundos
 
 }
