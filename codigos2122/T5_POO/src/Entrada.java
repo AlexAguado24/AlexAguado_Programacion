@@ -22,16 +22,13 @@ public class Entrada {
         // nombre="contraseña", pss=null, correo=null, edad=0, fecha=null
         System.out.println(usuario1.password);*/
 
-        System.out.println(usuario4.getCorreoElectronico());
-        System.out.println(usuario3.getNombre());
-        System.out.println(usuario1.getPassword());
-        System.out.println(usuario1.getFecha());
-        System.out.println(usuario4.getEdad());
-        System.out.println();
+        /*usuario3.setNombre("Alejandro");
+        System.out.println(usuario3.getNombre());*/
 
-        usuario3.setNombre("Alejandro");
-        System.out.println(usuario3.getNombre());
-
+        //usuario1.mostrarDatos();
+        //System.out.println(usuario1.mostrarDatosRetorno());
+        usuario1.saludar("Borja");
+        usuario1.saludar("Luis");
 
     }
 }

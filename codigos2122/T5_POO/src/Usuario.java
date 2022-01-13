@@ -28,6 +28,29 @@ public class Usuario {
 
     // metodos
 
+    public  void mostrarDatos (){
+        System.out.println("Nombre - "+nombre);
+        System.out.println("Apellidos - "+apellidos);
+        System.out.println("Contraseña - "+password);
+        System.out.println("correo - "+correoElectronico);
+        System.out.println("Fecha - "+fecha);
+        System.out.println("Edad - "+edad);
+    }
+
+    public String mostrarDatosRetorno(){
+        nombre = "Otra cosa";
+        return "Nombre "+ nombre+"\n"+"Apellido "+apellidos;
+    }
+
+    public void saludar(String nombreSaludar){
+        System.out.println("Hola "+nombreSaludar+" que tal estas");
+    }
+
+    public void saludar(Usuario usuario){
+        System.out.println("Hola " + usuario.getNombre() + " que tal estas");
+
+    }
+
     // metodos getters y setters
 
     //getters
