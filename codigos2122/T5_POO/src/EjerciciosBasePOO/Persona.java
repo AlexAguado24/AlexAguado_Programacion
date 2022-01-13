@@ -9,13 +9,14 @@ public class Persona {
 
     //contructores
 
-    public Persona(){
-        nombre = "Pepe";
-        apellido = "Garcia";
-        dni = "47878912P";
-        edad = 20;
-        altura = 180;
-        peso = 75.3;
+    public Persona(String nombre, String apellido, String dni, int edad
+            , int altura, double peso){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.edad = edad;
+        this.altura = altura;
+        this.peso = peso;
     }
 
     public Persona(String nombre, String apellido, String dni, int edad){
@@ -24,17 +25,18 @@ public class Persona {
         this.dni = dni;
         this.edad = edad;
     }
-    public Persona(String nombre, String apellido, String dni, int edad
-            , int altura, double peso ){
+    public Persona(String nombre, String apellido, String dni){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = "111111111X";
-        this.edad = 0;
-        this.altura = 0;
-        this.peso = 0;
-        
-
     }
+    public Persona (){
+        nombre = "Datos por defecto";
+        apellido = "Datos por defecto";
+        dni = "111111111X";
+    }
+
+
 
     //metodos
     //getters y setters
