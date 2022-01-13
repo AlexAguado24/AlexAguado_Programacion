@@ -36,9 +36,15 @@ public class Persona {
         dni = "111111111X";
     }
 
-
-
     //metodos
+    public void mostrarDatos(){
+        System.out.println("Nombre "+ nombre);
+        System.out.println("Apellido "+ apellido);
+        System.out.println("dni "+ dni);
+        System.out.println("Edad "+ edad);
+        System.out.println("Altura "+ altura);
+        System.out.println("Peso "+ peso);
+    }
     //getters y setters
 
     //getters

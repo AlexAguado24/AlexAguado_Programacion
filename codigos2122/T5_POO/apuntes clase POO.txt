@@ -1,0 +1,18 @@
+Los bojetos tienen 3 ptopiedades,
+
+1 las variables,
+tipos de acceso de las varibles = privadas(para que nadie pueda cambiarlos)
+
+2 metodo contructor o constructores (minimo 1 y puede haber tantos como necesite)
+si no hay constructores creados se usa el metodo por defecto
+
+3 metodos getter setter (tantos como funcionalidades como el usuario tenga)
+
+getter = devuelve un valor pedido
+	-public string getNombre{ return nombre}
+
+setter = setean 'cambian' el valor
+	-public string setNombre {String n = nombre}
+
+
+
