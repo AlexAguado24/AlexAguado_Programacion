@@ -43,7 +43,7 @@ public class Usuario {
     }
 
     public void saludar(String nombreSaludar){
-        System.out.println("Hola "+nombreSaludar+" que tal estas");
+        System.out.println("Hola soy "+nombre+" y voy a saludar a "+nombreSaludar+" que tal estas");
     }
 
     public void saludar(Usuario usuario){
