@@ -11,6 +11,8 @@ public class EntradaPersona {
 
         //Persona persona3 = new Persona("Carlos","Garcia");
 
+        persona.setEdad(20);
+        System.out.println(persona.getEdad());
         persona.mostrarDatos();
 
         /*persona1.mostrarDatos();
