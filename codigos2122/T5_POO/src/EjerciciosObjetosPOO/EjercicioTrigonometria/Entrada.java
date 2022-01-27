@@ -9,14 +9,15 @@ public class Entrada {
         Scanner in = new Scanner(System.in);
         int opcion = -1;
 
-        Triangulo triangulo = new Triangulo(5, 12);
+        /*Triangulo triangulo = new Triangulo(5, 12);
 
         Circulo circulo = new Circulo(9);
 
         Cuadrado cuadrado = new Cuadrado(10, 15);
 
-        System.out.print("El perimetro del cuadrado es: " + cuadrado.perimetroCuadrado(4, 9));
-        System.out.println();
+        triangulo.calcularAreaTriangulo();
+        System.out.print("El area del triangulo es: " + triangulo.getArea());
+        System.out.println();*/
         do {
 
             System.out.println("Elija una de las siguientes opciones");
@@ -36,18 +37,30 @@ public class Entrada {
 
                     Triangulo triangulo2 = new Triangulo(base, altura);
 
-                    int option;
-                    System.out.printf("Elige una opcion: %n"+
-                            "1.Calcular area %n" + "2.Mostrar datos%n");
-                    option = in.nextInt();
+                    do {
+                        System.out.printf("Elige una opcion: %n" +
+                                "1.Calcular area %n" + "2.Mostrar datos%n");
+                        System.out.println("0. Volver");
+                        opcion = in.nextInt();
 
-                    if (option == 1) {
-                        double area = base*altura;
-                        System.out.printf("El area del triangulo es %.2f%n",area);
-                    } else {
-                        System.out.println(triangulo2);
-                    }
+                        switch (opcion) {
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                        }
+                    } while (opcion!=0);
 
+                    System.out.println("pulsa enter para continuar");
+                    in.next();
+                    break;
+                case 2:
+                    System.out.println("Pulsa enter para continuar");
+                    in.next();
+                    break;
+                case 3:
+                    System.out.println("Pulsa enter para continuar");
+                    in.next();
                     break;
             }
 
