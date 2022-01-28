@@ -60,6 +60,7 @@ public class Agenda {
     public void listarAgenda(){
         for (Persona item :agenda) {
             item.mostrarDatos();
+            System.out.println();
         }
     }
 
