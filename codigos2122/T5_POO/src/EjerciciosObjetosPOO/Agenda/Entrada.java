@@ -33,7 +33,11 @@ public class Entrada {
                 case 2:
                     System.out.println("Indica el DNI de la persona");
                     dni = in.next();
-                    agenda.borrarPersona(dni);
+                    if (agenda.borrarPersona(dni)){
+                        System.out.println("Persona borrada correctamente");
+                    }else {
+                        System.out.println("Persona no encontrada");
+                    }
                     break;
                 case 3:
                     System.out.println("Indica el DNI de la persona");

@@ -19,17 +19,14 @@ public class Agenda {
         this.agenda.add(persona);
     }
 
-    public void borrarPersona(String dni){
+    public boolean borrarPersona(String dni){
         for (int i = 0; i < agenda.size(); i++) {
-            boolean existe = false;
-            if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
-                existe = true;
+            if (dni.equalsIgnoreCase(agenda.get(i).getDni())) {
                 agenda.remove(i);
-            } else {
-                System.out.println("La persona que buscas no existe");
+                return true;
             }
         }
-
+        return false;
     }
 
     public void editarPersona(String dni,String nombre, int telefono){
@@ -38,7 +35,8 @@ public class Agenda {
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
                 agenda.get(i).setNombre(nombre);
                 agenda.get(i).setTelefono(telefono);
-
+                System.out.println("Persona modificada");
+                break;
             } else {
                 System.out.println("La persona que buscas no existe");
             }
@@ -50,7 +48,7 @@ public class Agenda {
 
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
                 agenda.get(i).mostrarDatos();
-
+                break;
             } else {
                 System.out.println("La persona que buscas no existe");
             }
@@ -59,6 +57,7 @@ public class Agenda {
 
     public void listarAgenda(){
         for (Persona item :agenda) {
+            System.out.println("Imprimiendo persona");
             item.mostrarDatos();
             System.out.println();
         }
