@@ -46,7 +46,7 @@ public class Entrada {
                     nombre = in.next();
                     System.out.println("Introduce el telefono nuevo");
                     telefono = in.nextInt();
-                    agenda.editarPersona(dni,nombre,telefono);
+                    agenda.editarPersona(dni);
                     break;
                 case 4:
                     System.out.println("Introduce el DNI de la persona");

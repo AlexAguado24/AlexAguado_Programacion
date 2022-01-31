@@ -16,21 +16,53 @@ public class Agenda {
     //metodos
 
     public void agregarPersona (Persona persona){
-        this.agenda.add(persona);
+        /*boolean existe = false;
+        for (Persona item :agenda) {
+            if (item.getDni() == persona.getDni()) {
+                existe = true;
+                break;
+            }
+        }
+        if (existe){
+            System.out.println("La persona ya existe");
+        } else {
+            agenda.add(persona);
+        }*/
+        if (existePersona(persona.getDni()) == null){
+            agenda.add(persona);
+        } else {
+            System.out.println("La persona ya existe");
+        }
+    }
+
+    private Persona existePersona(String dni){
+        Persona persona = null;
+        for (Persona item:agenda) {
+            if (item.getDni().equalsIgnoreCase(dni)) {
+                return item;
+            }
+        }
+
+
+        return persona;
     }
 
     public boolean borrarPersona(String dni){
-        for (int i = 0; i < agenda.size(); i++) {
+        /*for (int i = 0; i < agenda.size(); i++) {
             if (dni.equalsIgnoreCase(agenda.get(i).getDni())) {
                 agenda.remove(i);
                 return true;
             }
+        }*/
+        if (existePersona(dni) != null){
+            agenda.remove(existePersona(dni));
+            return true;
         }
         return false;
     }
 
-    public void editarPersona(String dni,String nombre, int telefono){
-        for (int i = 0; i < agenda.size(); i++) {
+    public void editarPersona(String dni){
+        /*for (int i = 0; i < agenda.size(); i++) {
 
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
                 agenda.get(i).setNombre(nombre);
@@ -40,11 +72,17 @@ public class Agenda {
             } else {
                 System.out.println("La persona que buscas no existe");
             }
+        }*/
+        if (existePersona(dni) != null) {
+            Persona personaEncontrada = existePersona(dni);
+            personaEncontrada.setNombre("nuevo");
+            personaEncontrada.setTelefono(1234);
+            personaEncontrada.setDni("4568D");
         }
     }
 
     public void buscarPersona(String dni){
-        for (int i = 0; i < agenda.size(); i++) {
+        /*for (int i = 0; i < agenda.size(); i++) {
 
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
                 agenda.get(i).mostrarDatos();
@@ -52,6 +90,9 @@ public class Agenda {
             } else {
                 System.out.println("La persona que buscas no existe");
             }
+        }*/
+        if (existePersona(dni) != null){
+            existePersona(dni).mostrarDatos();
         }
     }
 
