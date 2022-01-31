@@ -25,8 +25,9 @@ public class Coche {
 
     //metodos
     public void acelerar (int velocidad){
-        velocidad += velocidad;
+        this.velocidad += velocidad;
         int incKilometros = velocidad * ((cv)* (int)(Math.random()*11)+1);
+        this.kilometrosRecorridos += incKilometros;
         final int VelMaxima = 180;
         if ( velocidad > VelMaxima ){
             velocidad = VelMaxima;
@@ -35,10 +36,10 @@ public class Coche {
     }
 
     public void frenar (int velocidadDeEntrada) {
+
         final int VelocidadMinima = 0;
-        if (velocidad >= velocidadDeEntrada) {
-            velocidad -= velocidadDeEntrada;
-        } else  {
+        velocidad = velocidadDeEntrada;
+        if (velocidad < VelocidadMinima) {
             velocidad = VelocidadMinima;
             System.out.println("No puedo reducir tanto la velocidad");
         }
@@ -86,5 +87,21 @@ public class Coche {
 
     public void setCv (int cv) {
 
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setKilometrosRecorridos(double kilometrosRecorridos) {
+        this.kilometrosRecorridos = kilometrosRecorridos;
     }
 }
