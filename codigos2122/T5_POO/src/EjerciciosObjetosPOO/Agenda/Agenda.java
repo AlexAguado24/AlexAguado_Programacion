@@ -9,13 +9,13 @@ public class Agenda {
 
     //constructores
 
-    public Agenda (){
-        this.agenda= new ArrayList();
+    public Agenda() {
+        this.agenda = new ArrayList();
     }
 
     //metodos
 
-    public void agregarPersona (Persona persona){
+    public void agregarPersona(Persona persona) {
         /*boolean existe = false;
         for (Persona item :agenda) {
             if (item.getDni() == persona.getDni()) {
@@ -28,40 +28,38 @@ public class Agenda {
         } else {
             agenda.add(persona);
         }*/
-        if (existePersona(persona.getDni()) == null){
+        if (existePersona(persona.getDni()) == null) {
             agenda.add(persona);
         } else {
             System.out.println("La persona ya existe");
         }
     }
 
-    private Persona existePersona(String dni){
+    private Persona existePersona(String dni) {
         Persona persona = null;
-        for (Persona item:agenda) {
+        for (Persona item : agenda) {
             if (item.getDni().equalsIgnoreCase(dni)) {
                 return item;
             }
         }
-
-
         return persona;
     }
 
-    public boolean borrarPersona(String dni){
+    public boolean borrarPersona(String dni) {
         /*for (int i = 0; i < agenda.size(); i++) {
             if (dni.equalsIgnoreCase(agenda.get(i).getDni())) {
                 agenda.remove(i);
                 return true;
             }
         }*/
-        if (existePersona(dni) != null){
+        if (existePersona(dni) != null) {
             agenda.remove(existePersona(dni));
             return true;
         }
         return false;
     }
 
-    public void editarPersona(String dni){
+    public void editarPersona(String dni) {
         /*for (int i = 0; i < agenda.size(); i++) {
 
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
@@ -81,7 +79,7 @@ public class Agenda {
         }
     }
 
-    public void buscarPersona(String dni){
+    public void buscarPersona(String dni) {
         /*for (int i = 0; i < agenda.size(); i++) {
 
             if (agenda.get(i).getDni().equalsIgnoreCase(dni)){
@@ -91,13 +89,13 @@ public class Agenda {
                 System.out.println("La persona que buscas no existe");
             }
         }*/
-        if (existePersona(dni) != null){
+        if (existePersona(dni) != null) {
             existePersona(dni).mostrarDatos();
         }
     }
 
-    public void listarAgenda(){
-        for (Persona item :agenda) {
+    public void listarAgenda() {
+        for (Persona item : agenda) {
             System.out.println("Imprimiendo persona");
             item.mostrarDatos();
             System.out.println();
