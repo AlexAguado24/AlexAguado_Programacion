@@ -85,8 +85,8 @@ public class Coche {
         return kilometrosRecorridos;
     }
 
-    public void setCv (int cv) {
-
+    public void setCv(int cv) {
+        this.cv = cv;
     }
 
     public void setVelocidad(int velocidad) {
