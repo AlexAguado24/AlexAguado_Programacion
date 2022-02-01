@@ -24,10 +24,10 @@ public class Banco {
         cuentasBanco.add(cuenta);
     }
 
-    public void borrarCuenta (Cuenta cuenta) {
+    public void borrarCuenta (String dni) {
         boolean existe = false;
         for (int i = 0; i < cuentasBanco.size(); i++) {
-            if (cuentasBanco.get(i).getCliente().equals(cuenta.getCliente())) {
+            if (cuentasBanco.get(i).getCliente().getDni().equalsIgnoreCase(dni)) {
                 existe = true;
                 cuentasBanco.remove(i);
                 break;
@@ -36,7 +36,6 @@ public class Banco {
             }
         }
     }
-
 
     //getters y setters
     public String getNombre() {

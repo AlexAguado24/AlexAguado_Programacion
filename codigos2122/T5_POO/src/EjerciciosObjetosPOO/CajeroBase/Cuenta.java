@@ -22,14 +22,31 @@ public class Cuenta {
     }
 
     //metodos
-    public void sacarDinero (String dni, int pin, double cantidad){
+    /*public boolean datosCorrectos (Cliente cliente, int pin) {
 
-        saldo -= cantidad;
+    }*/
 
-        if (saldo < 0){
-
+    public void ingresarDinero (String dni, int pin, double cantidad) {
+        if (cantidad > 0) {
+            saldo += cantidad;
+        } else {
+            System.out.println("No puedes ingresar esa cantidad");
         }
     }
+
+    public void sacarDinero (String dni, int pin, double cantidad){
+        saldo -= cantidad;
+        final int cantidadMinima = 0;
+        if (saldo < cantidadMinima){
+            System.out.println("No puedes sacar tanto dinero");
+        }
+    }
+
+    public void verResumen () {
+
+    }
+
+
 
     //getters y setters
 
