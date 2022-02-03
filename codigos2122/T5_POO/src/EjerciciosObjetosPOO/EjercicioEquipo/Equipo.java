@@ -33,7 +33,7 @@ public class Equipo {
 
     //metodos
     public boolean atacar () {
-        if (nivelAtaque*(nivelAtaque/(0-1))+(nivelCentro*nivelCentro/(0-1)/2)> 90){
+        if (nivelAtaque*(Math.random())+(nivelCentro*Math.random()/2)> 90){
             goles++;
             return true;
         } else {

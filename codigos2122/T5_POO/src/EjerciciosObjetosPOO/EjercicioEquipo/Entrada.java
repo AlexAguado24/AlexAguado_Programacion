@@ -5,7 +5,7 @@ public class Entrada {
     public static void main(String[] args) {
 
         Equipo equipoA = new Equipo("Madrid");
-        Equipo equipoB = new Equipo("Barsa",100,100,100);
+        Equipo equipoB = new Equipo("Barsa",60,60,60);
 
         equipoA.atacar();
         equipoB.atacar();
