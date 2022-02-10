@@ -20,6 +20,14 @@ public  class Coche {
         this.velocidad += velocidad;
     }
 
+    public void mostrarDator(){
+        System.out.println("Matricula: "+ matricula);
+        System.out.println("Bastidor: "+ bastidor);
+        System.out.println("CV: "+cv);
+        System.out.println("CC: "+cc);
+        System.out.println("Velocidad :"+ velocidad);
+    }
+
 
     // getters & setters
     public String getMatricula() {
