@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class Entrada {
 
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         /*Coche coche = new Coche("123A", "123", 100, 2000);
         coche.calcularVelocidad(80);
         System.out.println(coche.getVelocidad());*/
