@@ -40,6 +40,7 @@ public class Consesionario {
         } else {
             System.out.println("El coche que buscas no existe");
         }
+        System.out.println();
     }
 
     public void borrarCoche(String matricula) {
@@ -48,6 +49,7 @@ public class Consesionario {
         } else {
             System.out.println("El coche que buscas no existe");
         }
+        System.out.println();
     }
 
     public void listarCoche() {
@@ -56,5 +58,14 @@ public class Consesionario {
             item.mostrarDator();
             System.out.println();
         }
+        System.out.println();
+    }
+
+    public ArrayList<Coche> getListaCoches() {
+        return listaCoches;
+    }
+
+    public void setListaCoches(ArrayList<Coche> listaCoches) {
+        this.listaCoches = listaCoches;
     }
 }
