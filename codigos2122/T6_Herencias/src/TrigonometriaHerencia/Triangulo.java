@@ -4,6 +4,8 @@ public final class Triangulo extends Figura{
 
     private double base, altura;
 
+    public Triangulo(){}
+
     public Triangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
@@ -13,6 +15,7 @@ public final class Triangulo extends Figura{
     public void calcularArea() {
         super.calcularArea();
         area = (base * altura)/2;
+        //System.out.println("El area del triangulo es: "+area);
     }
 
     public double getBase() {
