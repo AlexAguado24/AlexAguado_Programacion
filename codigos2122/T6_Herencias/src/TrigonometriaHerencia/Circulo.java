@@ -11,15 +11,15 @@ public final class Circulo extends Figura{
     }
 
     @Override
-    public void calcularArea() {
-        super.calcularArea();
-        area = Math.PI * (radio *2);
-        //System.out.println("El area del circulo es: "+area);
+    public double calcularArea() {
+        this.area = Math.PI * Math.pow(radio,2);
+
+        return area;
     }
 
-    public void calcularDiametro () {
-        diametro = 2*radio;
-        //System.out.println("El diametro es: "+diametro);
+    public double calcularDiametro () {
+        this.diametro = 2*this.radio;
+        return this.diametro;
     }
 
     public double getRadio() {

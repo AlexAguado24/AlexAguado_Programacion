@@ -2,27 +2,26 @@ package TrigonometriaHerencia;
 
 public final class Triangulo extends Figura{
 
-    private double base, altura;
+    private int base, altura;
 
     public Triangulo(){}
 
-    public Triangulo(double base, double altura) {
+    public Triangulo(int base, int altura) {
         this.base = base;
         this.altura = altura;
     }
 
     @Override
-    public void calcularArea() {
-        super.calcularArea();
-        area = (base * altura)/2;
-        //System.out.println("El area del triangulo es: "+area);
+    public double calcularArea() {
+        this.area = (this.base * this.altura)/2;
+        return this.area;
     }
 
     public double getBase() {
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(int base) {
         this.base = base;
     }
 
@@ -30,7 +29,7 @@ public final class Triangulo extends Figura{
         return altura;
     }
 
-    public void setAltura(double altura) {
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 }

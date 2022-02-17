@@ -4,9 +4,9 @@ public abstract class Figura {
 
     protected double area;
 
-    public Figura(){}
+    Figura(){}
 
-    public void calcularArea(){}
+    public abstract double calcularArea();
 
     public double getArea() {
         return area;

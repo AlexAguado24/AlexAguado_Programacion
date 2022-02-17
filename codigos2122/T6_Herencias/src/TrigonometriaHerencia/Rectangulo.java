@@ -2,25 +2,26 @@ package TrigonometriaHerencia;
 
 public final class Rectangulo extends Figura{
 
-    private double base, altura, perimetro;
+    private int base, altura;
+    private  double perimetro;
 
     public Rectangulo(){}
 
-    public Rectangulo(double base, double altura) {
+    public Rectangulo(int base, int altura) {
         this.base = base;
         this.altura = altura;
     }
 
     @Override
-    public void calcularArea() {
-        super.calcularArea();
-        area = base*altura;
-        //System.out.println("El area del rectangulo es: "+area);
+    public double calcularArea() {
+        this.area = this.base*this.altura;
+        return this.area;
     }
 
-    public void calcularPerimetro(){
-        perimetro = 2 * (base + altura);
+    public double calcularPerimetro(){
+        this.perimetro = 2 * (this.base + this.altura);
         //System.out.println("El perimetro es: "+perimetro);
+        return this.perimetro;
     }
 
     public double getPerimetro() {
@@ -35,7 +36,7 @@ public final class Rectangulo extends Figura{
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(int base) {
         this.base = base;
     }
 
@@ -43,7 +44,7 @@ public final class Rectangulo extends Figura{
         return altura;
     }
 
-    public void setAltura(double altura) {
+    public void setAltura(int altura) {
         this.altura = altura;
     }
 }
