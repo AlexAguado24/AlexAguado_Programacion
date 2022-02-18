@@ -13,7 +13,7 @@ public final class Centralita {
 
     public void registrarLlamada(Llamada llamada) {
         registroLlamadas.add(llamada);
-        
+
         llamada.mostrarDatos();
         this.sumaCoste += llamada.getCoste();
     }
