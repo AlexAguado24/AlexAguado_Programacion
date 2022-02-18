@@ -6,15 +6,14 @@ public abstract class Llamada {
     protected double  coste;
 
     public Llamada(){}
-    public Llamada(int nOrigen, int nDestino, int duracion, double coste){
+    public Llamada(int nOrigen, int nDestino, int duracion){
         this.nOrigen = nOrigen;
         this.nDestino = nDestino;
         this.duracion = duracion;
-        this.coste = coste;
         calcularCoste();
     }
 
-    public abstract void calcularCoste();
+    protected abstract void calcularCoste();
 
     public  void mostrarDatos(){
         System.out.println("Nº Origen " + nOrigen);

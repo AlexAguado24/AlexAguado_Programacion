@@ -4,8 +4,8 @@ public final class LlamadaProvincial extends Llamada{
 
     public LlamadaProvincial(){}
 
-    public LlamadaProvincial(int nOrigen, int nDestino, int duracion, double coste){
-        super(nOrigen,nDestino,duracion,coste);
+    public LlamadaProvincial(int nOrigen, int nDestino, int duracion){
+        super(nOrigen,nDestino,duracion);
     }
 
     @Override

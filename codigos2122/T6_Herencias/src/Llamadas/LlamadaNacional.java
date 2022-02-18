@@ -7,21 +7,30 @@ public final class LlamadaNacional extends Llamada {
     public LlamadaNacional(){}
 
     public LlamadaNacional(int nOrigen, int nDestino, int duracion, int franja, double coste){
-        super(nOrigen,nDestino,duracion,coste);
+        super(nOrigen,nDestino,duracion);
         this.franja = franja;
+        mostrarDatos();
     }
 
     @Override
     public void calcularCoste() {
-        if (this.franja == 1) {
-            this.coste = this.duracion * 0.20;
+        switch (franja){
+            case 1:
+                this.coste = this.duracion * 0.20;
+                break;
+            case 2:
+                this.coste = this.duracion * 0.25;
+                break;
+            case 3:
+                this.coste = this.duracion * 0.30;
+                break;
         }
-        if (this.franja == 2) {
-            this.coste = this.duracion * 0.25;
-        }
-        if (this.franja == 3) {
-            this.coste = this.duracion * 0.30;
-        }
+    }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Franja "+ + franja);;
     }
 
     public int getFranja() {
