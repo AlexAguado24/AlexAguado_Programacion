@@ -13,61 +13,21 @@ public class Empresa {
 
     public void registrarTrabajador(Trabajadores trabajador) {
 
-        System.out.println("¿Que opcion quieres realizar?");
-        System.out.println("1. Añadir Jefe");
-        System.out.println("2. Añadir Asalariado");
-        System.out.println("3. Añadir Autonomo");
-        opcion = in.nextInt();
-
-        switch (opcion) {
-            case 1:
-                Jefes jefe = new Jefes();
-                System.out.println("Indica su Nombre");
-                jefe.setNombre(in.next());
-                System.out.println("Indica su apellido");
-                jefe.setApellido(in.next());
-                System.out.println("Indica su DNI");
-                jefe.setDni(in.next());
-                System.out.println("Indica sus acciones");
-                jefe.setAcciones(in.nextInt());
-                System.out.println("Indica sus beneficios");
-                jefe.setBeneficios(in.nextDouble());
-                listaTrabajadores.add(jefe);
+        boolean existe = false;
+        for (Trabajadores item : listaTrabajadores) {
+            if (item.dni.equalsIgnoreCase(trabajador.getDni())) {
+                existe = true;
+                System.out.println("Este trabajador ya esta en la empresa");
                 break;
-            case 2:
-                Asalariados asalariado = new Asalariados();
-                System.out.println("Indica su Nombre");
-                asalariado.setNombre(in.next());
-                System.out.println("Indica su apellido");
-                asalariado.setApellido(in.next());
-                System.out.println("Indica su DNI");
-                asalariado.setDni(in.next());
-                System.out.println("Indica su sueldo");
-                asalariado.setSueldo(in.nextInt());
-                System.out.println("Indica el numero de pagas");
-                asalariado.setNumPagas(in.nextInt());
-                System.out.println("¿Tiene contrato?");
-                asalariado.setContratado(in.hasNext());
-                listaTrabajadores.add(asalariado);
-                break;
-            case 3:
-                Autonomos autonomo = new Autonomos();
-                System.out.println("Indica su Nombre");
-                autonomo.setNombre(in.next());
-                System.out.println("Indica su apellido");
-                autonomo.setApellido(in.next());
-                System.out.println("Indica su DNI");
-                autonomo.setDni(in.next());
-                System.out.println("Indica su sueldo");
-                autonomo.setSueldo(in.nextInt());
-                System.out.println("¿Tiene contrato?");
-                autonomo.setContratado(in.hasNext());
-                listaTrabajadores.add(autonomo);
-                break;
+            }
         }
+        if (!existe) {
+            listaTrabajadores.add(trabajador);
+        }
+
     }
 
-    public void listarAsalariados() {
+    private void listarAsalariados() {
         for (Trabajadores item : listaTrabajadores) {
             if (item instanceof Asalariados) {
                 System.out.println(item.getClass().getSimpleName());
@@ -76,7 +36,7 @@ public class Empresa {
         }
     }
 
-    public void listarAutonomos() {
+    private void listarAutonomos() {
         for (Trabajadores item : listaTrabajadores) {
             if (item instanceof Autonomos) {
                 System.out.println(item.getClass().getSimpleName());
@@ -85,7 +45,7 @@ public class Empresa {
         }
     }
 
-    public void listarTodos() {
+    private void listarTodos() {
         for (Trabajadores item : listaTrabajadores) {
             System.out.println(item.getClass().getSimpleName());
             item.mostrarDatos();
@@ -95,13 +55,13 @@ public class Empresa {
 
     public void listarTrabajadores(String tipo) {
         switch (tipo) {
-            case "Asalariados":
+            case "asalariados":
                 listarAsalariados();
                 break;
-            case "Autonomos":
+            case "autonomos":
                 listarAutonomos();
                 break;
-            case "Todos":
+            case "todos":
                 listarTodos();
                 break;
         }
