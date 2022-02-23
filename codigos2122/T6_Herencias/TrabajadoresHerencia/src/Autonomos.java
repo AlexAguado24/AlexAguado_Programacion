@@ -17,5 +17,19 @@ public final class Autonomos extends Trabajadores{
         System.out.println("Contratado: "+this.contratado);
     }
 
+    public double getSueldo() {
+        return sueldo;
+    }
 
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public boolean isContratado() {
+        return contratado;
+    }
+
+    public void setContratado(boolean contratado) {
+        this.contratado = contratado;
+    }
 }
