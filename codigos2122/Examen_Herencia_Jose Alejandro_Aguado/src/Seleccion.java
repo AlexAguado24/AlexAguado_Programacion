@@ -16,9 +16,24 @@ public final class Seleccion {
         mostrarGastos();
     }
 
-    public void contratarJugador(Jugador jugador) {
+    private boolean existePersona(String dni) {
         boolean existe = false;
+        for (Persona item : listaJugadoresEntrenadores) {
+            if (item.getDni().equalsIgnoreCase(dni)) {
+                return true;
+            }
+        }
+        return existe;
+    }
 
+    public void contratarJugador(Jugador jugador) {
+
+        if (existePersona(jugador.getDni())) {
+            System.out.println("No se puede agregar a la persona por que ya existe");
+        } else {
+            this.listaJugadoresEntrenadores.add(jugador);
+        }
+        /*boolean existe = false;
         for (Persona persona : listaJugadoresEntrenadores) {
             if (persona.getDni().equalsIgnoreCase(jugador.getDni())) {
                 existe = true;
@@ -29,11 +44,16 @@ public final class Seleccion {
         if (!existe) {
             listaJugadoresEntrenadores.add(jugador);
             System.out.println("Jugador contratado");
-        }
+        }*/
     }
 
     public void contratarEntrenador(Entrenador entrenador) {
-        boolean existe = false;
+        if (existePersona(entrenador.getDni())) {
+            System.out.println("No se puede agregar a la persona por que ya existe");
+        } else {
+            this.listaJugadoresEntrenadores.add(entrenador);
+        }
+        /*boolean existe = false;
 
         for (Persona persona : listaJugadoresEntrenadores) {
             if (persona.getDni().equalsIgnoreCase(entrenador.getDni())) {
@@ -45,11 +65,11 @@ public final class Seleccion {
         if (!existe) {
             listaJugadoresEntrenadores.add(entrenador);
             System.out.println("Entrenador contratado");
-        }
+        }*/
     }
 
-    private void verDelanteros () {
-        for (Persona item :listaJugadoresEntrenadores) {
+    private void verDelanteros() {
+        for (Persona item : listaJugadoresEntrenadores) {
             if (item instanceof Jugador) {
                 if (((Jugador) item).getPosicion().equalsIgnoreCase("delantero")) {
                     item.mostrarDatos();
@@ -58,8 +78,8 @@ public final class Seleccion {
         }
     }
 
-    private void verMedios () {
-        for (Persona item :listaJugadoresEntrenadores) {
+    private void verMedios() {
+        for (Persona item : listaJugadoresEntrenadores) {
             if (item instanceof Jugador) {
                 if (((Jugador) item).getPosicion().equalsIgnoreCase("medio")) {
                     item.mostrarDatos();
@@ -68,8 +88,8 @@ public final class Seleccion {
         }
     }
 
-    private void verDefensas () {
-        for (Persona item :listaJugadoresEntrenadores) {
+    private void verDefensas() {
+        for (Persona item : listaJugadoresEntrenadores) {
             if (item instanceof Jugador) {
                 if (((Jugador) item).getPosicion().equalsIgnoreCase("defensa")) {
                     item.mostrarDatos();
@@ -78,8 +98,8 @@ public final class Seleccion {
         }
     }
 
-    private void verPorteros () {
-        for (Persona item :listaJugadoresEntrenadores) {
+    private void verPorteros() {
+        for (Persona item : listaJugadoresEntrenadores) {
             if (item instanceof Jugador) {
                 if (((Jugador) item).getPosicion().equalsIgnoreCase("portero")) {
                     item.mostrarDatos();
@@ -88,8 +108,8 @@ public final class Seleccion {
         }
     }
 
-    public void verPosicion (String posicion) {
-        switch (posicion){
+    public void verPosicion(String posicion) {
+        switch (posicion) {
             case "delantero":
                 verDelanteros();
                 break;
@@ -126,21 +146,19 @@ public final class Seleccion {
     public void verPlantilla() {
         int numJugadores = 0, numEntrenadores = 0;
         for (Persona item : listaJugadoresEntrenadores) {
+            item.mostrarDatos();
             if (item instanceof Jugador) {
-                item.mostrarDatos();
                 numJugadores++;
-                System.out.println();
             }
             if (item instanceof Entrenador) {
-                item.mostrarDatos();
                 numEntrenadores++;
-                System.out.println();
             }
         }
         System.out.println("El numero de jugadores es " + numJugadores + " y el de entrenadores es " + numEntrenadores);
     }
 
     public void mostrarGastos() {
+
 
         for (Persona persona : listaJugadoresEntrenadores) {
             if (persona instanceof Jugador) {
