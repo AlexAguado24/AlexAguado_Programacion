@@ -6,7 +6,6 @@ public final class Entrenador extends Persona{
     public Entrenador(){}
     public Entrenador(String nombre, String apellido, String dni, int edad, String vocacion, double sueldo){
         super(nombre, apellido, dni, edad);
-        this.vocacion = vocacion;
         this.sueldo = sueldo;
         calcularSueldo();
     }
