@@ -1,12 +1,13 @@
 public abstract class Trabajador extends Persona{
 
-    protected int sueldo;
-
+    protected double sueldo;
+    protected String departamento;
 
     public Trabajador(){}
 
-    public Trabajador(String nombre, String apellido, String dni, Departamento departamento) {
+    public Trabajador(String nombre, String apellido, String dni, String departamento) {
         super(nombre, apellido, dni);
+        this.departamento = departamento;
         calcularSueldo();
     }
 
@@ -14,11 +15,12 @@ public abstract class Trabajador extends Persona{
     public void mostrarDatos() {
         super.mostrarDatos();
         System.out.println("Sueldo; "+sueldo);
+        System.out.println("Departamento: "+departamento);
     }
 
     public abstract void calcularSueldo();
 
-    public int getSueldo() {
+    public double getSueldo() {
         return sueldo;
     }
 
