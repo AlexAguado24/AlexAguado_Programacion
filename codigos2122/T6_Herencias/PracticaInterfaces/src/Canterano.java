@@ -3,6 +3,7 @@ public final class Canterano extends Persona implements Seleccionable{
     private int posibilidades;
     private int ataque;
 
+
     public Canterano(String nombre, String apellido, double sueldo, int posibilidades) {
         super(nombre, apellido, sueldo);
         this.posibilidades = posibilidades;
@@ -17,6 +18,12 @@ public final class Canterano extends Persona implements Seleccionable{
     @Override
     public void calcularSueldo() {
         this.sueldo = 100;
+    }
+
+    @Override
+    public void repartirPrima() {
+        this.sueldo += 200;
+        System.out.println("Repartida prima a canterano: "+this.sueldo);
     }
 
     @Override

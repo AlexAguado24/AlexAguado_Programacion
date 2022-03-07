@@ -20,7 +20,8 @@ public class Entrada {
         seleccion.addPersona(canterano);
         seleccion.addPersona(entrenador);
 
-        seleccion.comprobarAtaque();
+        //seleccion.comprobarAtaque();
+        seleccion.darPrima();
 
     }
 

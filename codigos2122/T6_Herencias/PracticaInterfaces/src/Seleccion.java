@@ -16,11 +16,19 @@ public class Seleccion {
     public void comprobarAtaque() {
 
         for (Persona item : listaPersonas) {
-            if (!(item instanceof Entrenador)){
-                nivelAtaque += ((Seleccionable)item).atacar();
+            if (!(item instanceof Entrenador)) {
+                nivelAtaque += ((Seleccionable) item).atacar();
             }
         }
-        System.out.println("El nivel de ataque de la seleccion es: "+nivelAtaque);
+        System.out.println("El nivel de ataque de la seleccion es: " + nivelAtaque);
+    }
+
+    public void darPrima() {
+        for (Persona persona : listaPersonas) {
+            if (!(persona instanceof Entrenador)) {
+                ((Seleccionable)persona).repartirPrima();
+            }
+        }
     }
 
 }

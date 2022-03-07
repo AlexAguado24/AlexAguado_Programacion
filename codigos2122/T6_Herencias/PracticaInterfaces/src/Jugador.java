@@ -2,6 +2,7 @@ public final class Jugador extends Persona implements Seleccionable{
 
     private String posicion;
     private int ataque;
+    private double prima;
 
     public Jugador(String nombre, String apellido, double sueldo, String posicion) {
         super(nombre, apellido, sueldo);
@@ -30,6 +31,12 @@ public final class Jugador extends Persona implements Seleccionable{
             this.ataque = (int)(Math.random()*51);
         }
         return ataque;
+    }
+
+    @Override
+    public void repartirPrima() {
+        this.sueldo += this.sueldo * 1.20;
+        System.out.println("Repartida prima a jugador de: "+this.sueldo*0.20);
     }
 
     @Override
