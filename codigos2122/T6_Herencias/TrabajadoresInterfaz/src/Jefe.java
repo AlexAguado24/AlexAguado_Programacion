@@ -1,34 +1,34 @@
 public final class Jefe extends Trabajador implements Comision{
 
     private int trabajadores;
-    private double beneficios;
-    private int voto;
 
     public Jefe() {}
 
-    public Jefe(String nombre, String apellido, String dni, String departamento,int trabajadores) {
-        super(nombre, apellido, dni, departamento);
+    public Jefe(String nombre, String apellido, String dni,double sueldo, Departamento departamento,int trabajadores) {
+        super(nombre, apellido, dni,sueldo,departamento);
         this.trabajadores = trabajadores;
     }
 
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
+        System.out.println("Trabajadores: "+trabajadores);
     }
 
     @Override
     public void calcularSueldo() {
-        this.sueldo = this.sueldo - (this.sueldo * Admin.IRPF);
+        this.sueldo = this.sueldo;
     }
 
     @Override
-    public void votar(int voto) {
-        this.voto = (int)(Math.random()*6)/3;
+    public double votar() {
+        double voto = (Math.random()*11)/3;
+        return voto;
     }
 
     @Override
-    public void repatirBeneficios() {
-        this.beneficios = this.beneficios * 0.25;
+    public void obtenerBeneficio(int beneficios) {
+        this.sueldo += (beneficios * 0.10);
     }
 
     public int getTrabajadores() {

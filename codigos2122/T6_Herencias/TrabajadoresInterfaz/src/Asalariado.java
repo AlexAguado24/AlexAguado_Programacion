@@ -4,8 +4,8 @@ public final class Asalariado extends Trabajador{
 
     public Asalariado() {}
 
-    public Asalariado(String nombre, String apellido, String dni, String departamento, int numPagas) {
-        super(nombre, apellido, dni, departamento);
+    public Asalariado(String nombre, String apellido, String dni,double sueldo, Departamento departamento, int numPagas) {
+        super(nombre, apellido, dni,sueldo,departamento);
         this.numPagas = numPagas;
     }
 

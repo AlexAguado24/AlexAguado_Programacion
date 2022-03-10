@@ -3,11 +3,16 @@ import java.util.ArrayList;
 public final class Empresa {
 
     private ArrayList<Persona> listaPersonas;
+    private String nombre;
+    private int beneficios;
+    private int votos;
 
     public Empresa() {
     }
 
-    public Empresa(ArrayList<Persona> listaPersonas) {
+    public Empresa(String nombre, int beneficios) {
+        this.nombre = nombre;
+        this.beneficios = beneficios;
         listaPersonas = new ArrayList<>();
     }
 
@@ -21,10 +26,10 @@ public final class Empresa {
         return persona;
     }
 
-    public void contratarPersona(Trabajador trabajador) {
+    public void contratarPersona(Persona persona) {
 
-        if (existePersona(trabajador.getDni()) == null) {
-            listaPersonas.add(trabajador);
+        if (existePersona(persona.getDni()) == null) {
+            listaPersonas.add(persona);
         } else {
             System.out.println("La persona ya esta contratada");
         }
@@ -53,5 +58,49 @@ public final class Empresa {
         for (Persona item : listaPersonas) {
             item.mostrarDatos();
         }
+    }
+
+    public void registrarVotacion(Comision comision) {
+        this.votos += comision.votar();
+    }
+
+    public void repartirBeneficios() {
+        for (Persona item : listaPersonas){
+            if (item instanceof Comision){
+                ((Comision) item).obtenerBeneficio(beneficios);
+            }
+        }
+    }
+
+    public ArrayList<Persona> getListaPersonas() {
+        return listaPersonas;
+    }
+
+    public void setListaPersonas(ArrayList<Persona> listaPersonas) {
+        this.listaPersonas = listaPersonas;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getBeneficios() {
+        return beneficios;
+    }
+
+    public void setBeneficios(int beneficios) {
+        this.beneficios = beneficios;
+    }
+
+    public int getVotos() {
+        return votos;
+    }
+
+    public void setVotos(int votos) {
+        this.votos = votos;
     }
 }
