@@ -1,4 +1,4 @@
-public final class CD extends Elemento{
+public final class CD extends Elemento implements Prestar{
 
     private int anioEdicion;
     private TipoCD genero;
@@ -16,6 +16,18 @@ public final class CD extends Elemento{
         super.mostrarDatos();
         System.out.println("Año edicion: "+anioEdicion);
         System.out.println("Genero: "+genero.getNombre());
+    }
+
+    @Override
+    public boolean prestar() {
+        setEstado(false);
+        return isEstado();
+    }
+
+    @Override
+    public boolean devolver() {
+        setEstado(true);
+        return isEstado();
     }
 
     public int getAnioEdicion() {

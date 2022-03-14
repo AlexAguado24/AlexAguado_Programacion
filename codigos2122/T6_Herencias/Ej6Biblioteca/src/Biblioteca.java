@@ -6,34 +6,53 @@ public class Biblioteca {
     private ArrayList<Elemento> listaElemento;
     private int numSocios = 0;
 
-    public Biblioteca () {
+    public Biblioteca() {
         listaElemento = new ArrayList<>();
         listaPersonas = new ArrayList<>();
     }
 
     public void addPersona(Persona p) {
         if (p instanceof Socio) {
-            ((Socio)p).setNumSocio(numSocios++);
+            ((Socio) p).setNumSocio(numSocios++);
         } else {
             listaPersonas.add(p);
         }
     }
 
-    public void addAlquilable (Prestar prestable){
-        this.listaElemento.add((Elemento)prestable);
+    public void addAlquilable(Prestar prestable) {
+        this.listaElemento.add((Elemento) prestable);
     }
 
-    public void realizarPrestamo (Socio socio, Prestar prestable){
+    public void realizarPrestamo(Socio socio, Prestar prestable) {
         if (((Elemento) prestable).isEstado()) {
             socio.getPrestamos().add(prestable);
             prestable.prestar();
         }
     }
 
-    public void realizarDevolucion(Socio socio, Prestar prestable){
+    public void realizarDevolucion(Socio socio, Prestar prestable) {
         socio.getPrestamos().remove(prestable);
         prestable.devolver();
     }
 
+    public void elementosPrestados() {
+        for (Elemento item : listaElemento) {
+            if (item instanceof Prestar){
+                if(!item.estado) {
+                    item.mostrarDatos();
+                }
+            }
+        }
+    }
+
+    public void mostrarDisponibles () {
+        for (Elemento item : listaElemento) {
+            if (item instanceof Prestar){
+                if(item.estado) {
+                    item.mostrarDatos();
+                }
+            }
+        }
+    }
 
 }

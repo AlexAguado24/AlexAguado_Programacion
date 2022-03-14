@@ -1,4 +1,4 @@
-public final class Revista extends Elemento {
+public final class Revista extends Elemento implements Prestar{
 
     private String ISBN;
 
@@ -14,6 +14,18 @@ public final class Revista extends Elemento {
     public void mostrarDatos() {
         super.mostrarDatos();
         System.out.println("ISBN: "+ISBN);
+    }
+
+    @Override
+    public boolean prestar() {
+        setEstado(false);
+        return isEstado();
+    }
+
+    @Override
+    public boolean devolver() {
+        setEstado(true);
+        return isEstado();
     }
 
     public String getISBN() {

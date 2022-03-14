@@ -26,13 +26,14 @@ public final class Libro extends Elemento implements Prestar{
 
     @Override
     public boolean prestar() {
-
-        return false;
+        setEstado(false);
+        return isEstado();
     }
 
     @Override
     public boolean devolver() {
-        return false;
+        setEstado(true);
+        return isEstado();
     }
 
     public String getISBN() {
