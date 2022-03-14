@@ -5,8 +5,8 @@ public final class Revista extends Elemento {
     public Revista() {
     }
 
-    public Revista(String id, String seccion, String titulo, boolean estado, String ISBN) {
-        super(id, seccion, titulo, estado);
+    public Revista(String id, String seccion, String titulo, String ISBN) {
+        super(id, seccion, titulo);
         this.ISBN = ISBN;
     }
 

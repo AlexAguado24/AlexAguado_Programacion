@@ -6,8 +6,8 @@ public final class DVD extends Elemento{
 
     public DVD(){}
 
-    public DVD(String id, String seccion, String titulo, boolean estado, int anioEdicion, String director, String actores, TipoDVD genero) {
-        super(id, seccion, titulo, estado);
+    public DVD(String id, String seccion, String titulo, int anioEdicion, String director, String actores, TipoDVD genero) {
+        super(id, seccion, titulo);
         this.anioEdicion = anioEdicion;
         this.director = director;
         this.actores = actores;
@@ -20,7 +20,7 @@ public final class DVD extends Elemento{
         System.out.println("Año edicion: "+anioEdicion);
         System.out.println("Director: "+director);
         System.out.println("Actores: "+actores);
-        System.out.println("Genero: "+genero);
+        System.out.println("Genero: "+genero.getNombre());
     }
 
     public int getAnioEdicion() {

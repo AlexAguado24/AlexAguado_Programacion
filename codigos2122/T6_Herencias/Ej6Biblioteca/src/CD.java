@@ -5,8 +5,8 @@ public final class CD extends Elemento{
 
     public CD (){}
 
-    public CD(String id, String seccion, String titulo, boolean estado, int anioEdicion, TipoCD genero) {
-        super(id, seccion, titulo, estado);
+    public CD(String id, String seccion, String titulo, int anioEdicion, TipoCD genero) {
+        super(id, seccion, titulo);
         this.anioEdicion = anioEdicion;
         this.genero = genero;
     }
@@ -15,7 +15,7 @@ public final class CD extends Elemento{
     public void mostrarDatos() {
         super.mostrarDatos();
         System.out.println("Año edicion: "+anioEdicion);
-        System.out.println("Genero: "+genero);
+        System.out.println("Genero: "+genero.getNombre());
     }
 
     public int getAnioEdicion() {

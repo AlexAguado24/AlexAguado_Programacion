@@ -1,16 +1,17 @@
-public final class Libro extends Elemento{
+public final class Libro extends Elemento implements Prestar{
 
-    private String ISBN, autor;
+    private String ISBN, autor, editorial;
     private int numPaginas;
     private boolean estado;
 
 
     public Libro() {}
 
-    public Libro(String id, String seccion, String titulo,boolean estado, String ISBN, String autor, int numPaginas) {
-        super(id, seccion, titulo, estado);
+    public Libro(String id, String seccion, String titulo, String ISBN, String autor,String editorial, int numPaginas) {
+        super(id, seccion, titulo);
         this.ISBN = ISBN;
         this.autor = autor;
+        this.editorial = editorial;
         this.numPaginas = numPaginas;
 
     }
@@ -21,7 +22,17 @@ public final class Libro extends Elemento{
         System.out.println("ISBN: "+ISBN);
         System.out.println("Autor: "+autor);
         System.out.println("Numero de paginas: "+numPaginas);
-        System.out.println("Estado: "+estado);
+    }
+
+    @Override
+    public boolean prestar() {
+
+        return false;
+    }
+
+    @Override
+    public boolean devolver() {
+        return false;
     }
 
     public String getISBN() {

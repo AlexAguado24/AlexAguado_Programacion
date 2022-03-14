@@ -1,7 +1,7 @@
 public enum Departamento {
 
     ventas("ventas", 10), finanzas("finanzas",10),
-     it("it",20), comercial("comercial",5);
+     it("it",20), comercial("comercial",5 );
 
     String nombre;
     int trabajadores;

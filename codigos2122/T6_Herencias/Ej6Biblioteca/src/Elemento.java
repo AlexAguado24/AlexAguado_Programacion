@@ -4,18 +4,17 @@ public abstract class Elemento {
     protected boolean estado;
 
     public Elemento (){}
-    public Elemento (String id, String seccion, String titulo, boolean estado){
+    public Elemento (String id, String seccion, String titulo){
         this.id = id;
         this.seccion = seccion;
         this.titulo = titulo;
-        this.estado = estado;
+        this.estado = true;
     }
 
     public void mostrarDatos (){
         System.out.println("ID: "+id);
         System.out.println("Seccion: "+seccion);
         System.out.println("Titulo: "+titulo);
-        System.out.println("Estado: "+estado);
     }
 
     public String getId() {
@@ -49,4 +48,6 @@ public abstract class Elemento {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+
+
 }
