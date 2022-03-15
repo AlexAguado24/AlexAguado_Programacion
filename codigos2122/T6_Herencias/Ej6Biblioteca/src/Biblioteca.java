@@ -45,23 +45,46 @@ public class Biblioteca {
         return listaPersonas;
     }
 
-    public void setListaPersonas(ArrayList<Persona> listaPersonas) {
-        this.listaPersonas = listaPersonas;
-    }
+        public void elementosPrestados() {
+            for (Elemento item : listaElemento) {
+                if (item instanceof Prestar) {
+                    if (!item.estado) {
+                        item.mostrarDatos();
+                    }
+                }
+            }
+        }
 
-    public ArrayList<Elemento> getListaElemento() {
-        return listaElemento;
-    }
+        public void mostrarDisponibles () {
+            for (Elemento item : listaElemento) {
+                if (item instanceof Prestar) {
+                    if (item.estado) {
+                        item.mostrarDatos();
+                    }
+                }
+            }
+        }
 
-    public void setListaElemento(ArrayList<Elemento> listaElemento) {
-        this.listaElemento = listaElemento;
-    }
+        public void setListaPersonas (ArrayList < Persona > listaPersonas) {
+            this.listaPersonas = listaPersonas;
+        }
 
-    public int getNumSocios() {
-        return numSocios;
-    }
+        public ArrayList<Elemento> getListaElemento () {
+            return listaElemento;
+        }
 
-    public void setNumSocios(int numSocios) {
-        this.numSocios = numSocios;
-    }
+        public void setListaElemento (ArrayList < Elemento > listaElemento) {
+            this.listaElemento = listaElemento;
+        }
+
+        public int getNumSocios () {
+            return numSocios;
+        }
+
+        public void setNumSocios ( int numSocios){
+            this.numSocios = numSocios;
+        }
+        
 }
+
+
