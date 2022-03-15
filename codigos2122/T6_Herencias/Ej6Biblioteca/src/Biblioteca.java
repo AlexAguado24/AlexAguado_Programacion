@@ -35,24 +35,56 @@ public class Biblioteca {
         prestable.devolver();
     }
 
-    public void elementosPrestados() {
-        for (Elemento item : listaElemento) {
-            if (item instanceof Prestar){
-                if(!item.estado) {
-                    item.mostrarDatos();
-                }
-            }
+    public void listarPersona() {
+        for (Persona item : listaPersonas) {
+            item.mostrarDatos();
         }
     }
 
-    public void mostrarDisponibles () {
-        for (Elemento item : listaElemento) {
-            if (item instanceof Prestar){
-                if(item.estado) {
-                    item.mostrarDatos();
+    public ArrayList<Persona> getListaPersonas() {
+        return listaPersonas;
+    }
+
+        public void elementosPrestados() {
+            for (Elemento item : listaElemento) {
+                if (item instanceof Prestar) {
+                    if (!item.estado) {
+                        item.mostrarDatos();
+                    }
                 }
             }
         }
-    }
 
+        public void mostrarDisponibles () {
+            for (Elemento item : listaElemento) {
+                if (item instanceof Prestar) {
+                    if (item.estado) {
+                        item.mostrarDatos();
+                    }
+                }
+            }
+        }
+
+        public void setListaPersonas (ArrayList < Persona > listaPersonas) {
+            this.listaPersonas = listaPersonas;
+        }
+
+        public ArrayList<Elemento> getListaElemento () {
+            return listaElemento;
+        }
+
+        public void setListaElemento (ArrayList < Elemento > listaElemento) {
+            this.listaElemento = listaElemento;
+        }
+
+        public int getNumSocios () {
+            return numSocios;
+        }
+
+        public void setNumSocios ( int numSocios){
+            this.numSocios = numSocios;
+        }
+        
 }
+
+
