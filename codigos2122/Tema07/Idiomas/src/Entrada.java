@@ -59,7 +59,6 @@ public class Entrada {
         aleman.ingresarPalabra("gehen");
 
         for (Idiomas item : listaIdiomas) {
-            System.out.println("El saludo en " + item.getNombre() + " es ");
             item.saludar();
             item.despedir();
         }

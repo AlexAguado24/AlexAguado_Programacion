@@ -8,7 +8,7 @@ public final class Socio extends Persona {
     public Socio() {
     }
 
-    public Socio(String nombre, String apellido, String dni, int numSocio) {
+    public Socio(String nombre, String apellido, String dni) {
         super(nombre, apellido, dni);
         this.numSocio = numSocio;
         this.prestamos = new ArrayList();

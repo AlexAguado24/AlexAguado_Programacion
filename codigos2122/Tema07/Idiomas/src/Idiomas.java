@@ -23,7 +23,7 @@ public abstract class Idiomas {
     }
 
     public void listarPalabras() {
-        System.out.printf("Las palabras en %s%n son ", nombre);
+        System.out.printf("Las palabras en %s son %n", nombre);
         for (String item : palabras) {
             System.out.println(item);
         }

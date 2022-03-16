@@ -4,7 +4,7 @@ public class Entrada {
         Libro libro = new Libro();
         DVD dvd = new DVD();
         Biblioteca biblioteca = new Biblioteca();
-        biblioteca.addPersona(new Socio("aeef","qwer","fdhg",0));
+        biblioteca.addPersona(new Socio("aeef","qwer","fdhg"));
 
 
 
