@@ -1,3 +1,5 @@
+import com.sun.source.tree.CompoundAssignmentTree;
+
 import java.util.ArrayList;
 
 public class Entrada {
@@ -42,7 +44,7 @@ public class Entrada {
             }
         };
 
-        listaIdiomas.add(castellano);
+        /*listaIdiomas.add(castellano);
         listaIdiomas.add(ingles);
         listaIdiomas.add(aleman);
 
@@ -65,8 +67,15 @@ public class Entrada {
 
         for (Idiomas idioma : listaIdiomas) {
             idioma.listarPalabras();
-        }
+        }*/
 
+        Dialecto catalan = new Dialecto("Catalan",2000, castellano);
+
+        catalan.cuantificar(20, new Cuantificable() {
+            @Override
+            public void cuantificarHablantes(int n) {
+                System.out.println("El numero de hablantes de "+ catalan.getNombre()+" es el "+n+"%");
+            }
+        });
     }
-
 }
