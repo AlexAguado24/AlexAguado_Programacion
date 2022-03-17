@@ -69,12 +69,12 @@ public class Entrada {
             idioma.listarPalabras();
         }*/
 
-        Dialecto catalan = new Dialecto("Catalan",2000, castellano);
+        Dialecto catalan = new Dialecto( castellano, 2000);
 
         catalan.cuantificar(20, new Cuantificable() {
             @Override
             public void cuantificarHablantes(int n) {
-                System.out.println("El numero de hablantes de "+ catalan.getNombre()+" es el "+n+"%");
+                catalan.setNumHablantes(catalan.getNumeroHablantes()*n);
             }
         });
     }
