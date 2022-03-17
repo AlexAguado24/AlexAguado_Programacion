@@ -21,7 +21,13 @@ public class Partido {
     }
 
     public void mostrarResultado() {
-        System.out.println("El resultado del partido es ");
+        System.out.println("El resultado del partido es "+ equipoLocal.nombre +" = "
+                + golesLocal +" : "+ equipoVisitante+ " = "+ golesVisitante);
+        if (golesLocal > golesVisitante) {
+            equipoLocal.puntos += 3;
+        } else {
+            equipoVisitante.puntos += 3;
+        }
     }
 
 
@@ -70,8 +76,7 @@ public class Partido {
         private int puntos;
         private String nombre;
 
-        public Equipo(int puntos, String nombre) {
-            this.puntos = puntos;
+        public Equipo( String nombre) {
             this.nombre = nombre;
         }
 
