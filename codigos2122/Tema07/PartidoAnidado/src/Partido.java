@@ -1,4 +1,4 @@
-public class Partido {
+public final class Partido {
 
     private Equipo equipoLocal, equipoVisitante;
     private boolean jugado;
@@ -21,13 +21,7 @@ public class Partido {
     }
 
     public void mostrarResultado() {
-        System.out.println("El resultado del partido es "+ equipoLocal.nombre +" = "
-                + golesLocal +" : "+ equipoVisitante+ " = "+ golesVisitante);
-        if (golesLocal > golesVisitante) {
-            equipoLocal.puntos += 3;
-        } else {
-            equipoVisitante.puntos += 3;
-        }
+        System.out.printf("%s: %d - %s: %D", equipoLocal.getNombre(), golesLocal, equipoVisitante.getNombre(), golesVisitante);
     }
 
 
@@ -78,6 +72,12 @@ public class Partido {
 
         public Equipo( String nombre) {
             this.nombre = nombre;
+            if (nombre.equalsIgnoreCase("FC Barcelona")){
+                setEquipoLocal(equipoLocal);
+            }
+            if (nombre.equalsIgnoreCase("Real Madrid")) {
+                setEquipoVisitante(equipoVisitante);
+            }
         }
 
         public int getPuntos() {
