@@ -19,13 +19,14 @@ public class Entrada {
         listaEquipos.add(atleti);
         listaEquipos.add(betis);
 
-        Torneo.Partido partido = torneo.new Partido(madrid, barsa);
 
         torneo.realizarSorteo(listaEquipos);
 
+
         torneo.mostrarPartido();
 
-        torneo.jugarPartido(partido);
+
+
 
 
 
