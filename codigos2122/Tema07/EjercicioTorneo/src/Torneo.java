@@ -1,8 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Torneo {
 
     private ArrayList<Partido> listaPartidos;
+    private ArrayList<Equipo> listaEquipos;
     private String nombre;
 
 
@@ -12,6 +15,9 @@ public class Torneo {
     }
 
     public void realizarSorteo(ArrayList<Equipo> equipos) {
+
+        this.listaEquipos = equipos;
+
         for (int i = 0; i < equipos.size(); i++) {
             for (int j = i + 1; j < equipos.size(); j++) {
                 Partido partido = new Partido(equipos.get(i), equipos.get(j));
@@ -25,7 +31,7 @@ public class Torneo {
                 listaPartidos.add(partido);
             }
         }
-
+        Collections.shuffle(listaPartidos);
     }
 
     public void mostrarPartido() {
@@ -34,41 +40,24 @@ public class Torneo {
         }
     }
 
-    public void jugarPartido(Partido partido) {
-        for (Partido item : listaPartidos) {
-            for (int i = 0; i < 3; i++) {
-                if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
-                    partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
-                }
-                if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
-                    partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
-                }
-            }
-            for (int i = 0; i < 3; i++) {
-                if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
-                    partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
-                }
-                if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
-                    partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
-                }
-            }
+    public void imprimirClasificacion() {
 
-            System.out.printf("El resultado del partido es %s %d - %s %d%n", partido.equipoLocal.getNombre(), partido.equipoLocal.getGolesEncuentro(), partido.equipoVisitante.getNombre(), partido.equipoVisitante.getGolesEncuentro());
-            item.setJugado(true);
-
-            if (item.equipoLocal.getGolesEncuentro() == item.equipoVisitante.getGolesEncuentro()) {
-                item.equipoLocal.puntos += 1;
-                item.equipoVisitante.puntos += 1;
-            } else if (item.equipoLocal.getGolesEncuentro() > item.equipoVisitante.getGolesEncuentro()) {
-                item.equipoLocal.puntos += 3;
-            } else if (item.equipoLocal.getGolesEncuentro() < item.equipoVisitante.getGolesEncuentro()) {
-                item.equipoVisitante.puntos += 3;
+        Collections.sort(listaEquipos, new Comparator<Equipo>() {
+            @Override
+            public int compare(Equipo o1, Equipo o2) {
+                if (o1.getPuntos() > o2.getPuntos()) {
+                    return -1;
+                }
+                return 0;
             }
+        });
+
+        int contador = 1;
+
+        for (Equipo equipo : listaEquipos) {
+            System.out.printf("%d - %s - %d%n",contador, equipo.getNombre(),equipo.getPuntos());
+            contador++;
         }
-    }
-
-    public void clasificacion() {
-
     }
 
     public ArrayList<Partido> getListaPartidos() {
@@ -95,6 +84,40 @@ public class Torneo {
         public Partido(Equipo equipoLocal, Equipo equipoVisitante) {
             this.equipoLocal = equipoLocal;
             this.equipoVisitante = equipoVisitante;
+        }
+
+
+        public void jugarPartido(Partido partido) {
+            for (Partido item : listaPartidos) {
+                for (int i = 0; i < 3; i++) {
+                    if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
+                        partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
+                    }
+                    if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
+                        partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
+                    }
+                }
+                for (int i = 0; i < 3; i++) {
+                    if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
+                        partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
+                    }
+                    if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
+                        partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
+                    }
+                }
+
+                System.out.printf("El resultado del partido es %s %d - %s %d%n", partido.equipoLocal.getNombre(), partido.equipoLocal.getGolesEncuentro(), partido.equipoVisitante.getNombre(), partido.equipoVisitante.getGolesEncuentro());
+                item.setJugado(true);
+
+                if (item.equipoLocal.getGolesEncuentro() == item.equipoVisitante.getGolesEncuentro()) {
+                    item.equipoLocal.setPuntos(equipoLocal.puntos + 1);
+                    item.equipoVisitante.setPuntos(equipoLocal.puntos + 1);
+                } else if (item.equipoLocal.getGolesEncuentro() > item.equipoVisitante.getGolesEncuentro()) {
+                    item.equipoLocal.setPuntos(equipoLocal.puntos + 3);
+                } else if (item.equipoLocal.getGolesEncuentro() < item.equipoVisitante.getGolesEncuentro()) {
+                    item.equipoVisitante.setPuntos(equipoVisitante.puntos + 3);
+                }
+            }
         }
 
 
