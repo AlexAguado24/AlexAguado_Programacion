@@ -6,7 +6,7 @@ public class Entrada {
 
     public static void main(String[] args) {
 
-        Torneo torneo = new Torneo("Copa");
+        Torneo copa = new Torneo("Copa");
         ArrayList<Torneo.Equipo> listaEquipos = new ArrayList<>();
 
         Torneo.Equipo madrid = new Torneo.Equipo("Madrid",95,75);
@@ -19,17 +19,10 @@ public class Entrada {
         listaEquipos.add(atleti);
         listaEquipos.add(betis);
 
-
-        torneo.realizarSorteo(listaEquipos);
-
-
-        torneo.mostrarPartido();
-
-
-
-
-
-
+        copa.realizarSorteo(listaEquipos);
+        copa.mostrarPartido();
+        copa.iniciarTorneo();
+        System.out.println("Los partidos jugados son");
+        copa.imprimirClasificacion();
     }
-
 }

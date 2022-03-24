@@ -40,6 +40,22 @@ public class Torneo {
         }
     }
 
+    public void iniciarTorneo() {
+        for (Partido item : listaPartidos) {
+            item.jugarPartido();
+        }
+    }
+
+    public void mostrarPartidoJugado() {
+        for (Partido partido : listaPartidos) {
+            System.out.printf("%s : %d vs %s : %d%n",
+                    partido.getEquipoLocal().getNombre(),
+                    partido.golesLocal,
+                    partido.getEquipoVisitante().getNombre(),
+                    partido.golesVisitante);
+        }
+    }
+
     public void imprimirClasificacion() {
 
         Collections.sort(listaEquipos, new Comparator<Equipo>() {
@@ -55,7 +71,7 @@ public class Torneo {
         int contador = 1;
 
         for (Equipo equipo : listaEquipos) {
-            System.out.printf("%d - %s - %d%n",contador, equipo.getNombre(),equipo.getPuntos());
+            System.out.printf("%d - %s - %d%n", contador, equipo.getNombre(), equipo.getPuntos());
             contador++;
         }
     }
@@ -86,37 +102,35 @@ public class Torneo {
             this.equipoVisitante = equipoVisitante;
         }
 
+        public void generarGolesLocales() {
+            if (equipoLocal.nivelAtaque > equipoVisitante.nivelDefensa) {
+                equipoLocal.golesTotales = (int) (Math.random() * 3);
+                equipoLocal.setGolesEncuentro(equipoLocal.getGolesEncuentro() + golesLocal);
+            }
+        }
 
-        public void jugarPartido(Partido partido) {
-            for (Partido item : listaPartidos) {
-                for (int i = 0; i < 3; i++) {
-                    if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
-                        partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
-                    }
-                    if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
-                        partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
-                    }
-                }
-                for (int i = 0; i < 3; i++) {
-                    if (partido.equipoLocal.nivelAtaque > partido.equipoVisitante.nivelDefensa) {
-                        partido.equipoLocal.golesTotales = (int) (Math.random() * 3);
-                    }
-                    if (partido.equipoVisitante.nivelAtaque > partido.equipoLocal.nivelDefensa) {
-                        partido.equipoVisitante.golesTotales = (int) (Math.random() * 3);
-                    }
-                }
+        public void generarGolesVisitante() {
+            if (equipoVisitante.nivelAtaque > equipoLocal.nivelDefensa) {
+                equipoVisitante.golesTotales = (int) (Math.random() * 3);
+                equipoVisitante.setGolesEncuentro(equipoVisitante.getGolesEncuentro() + golesLocal);
+            }
+        }
 
-                System.out.printf("El resultado del partido es %s %d - %s %d%n", partido.equipoLocal.getNombre(), partido.equipoLocal.getGolesEncuentro(), partido.equipoVisitante.getNombre(), partido.equipoVisitante.getGolesEncuentro());
-                item.setJugado(true);
-
-                if (item.equipoLocal.getGolesEncuentro() == item.equipoVisitante.getGolesEncuentro()) {
-                    item.equipoLocal.setPuntos(equipoLocal.puntos + 1);
-                    item.equipoVisitante.setPuntos(equipoLocal.puntos + 1);
-                } else if (item.equipoLocal.getGolesEncuentro() > item.equipoVisitante.getGolesEncuentro()) {
-                    item.equipoLocal.setPuntos(equipoLocal.puntos + 3);
-                } else if (item.equipoLocal.getGolesEncuentro() < item.equipoVisitante.getGolesEncuentro()) {
-                    item.equipoVisitante.setPuntos(equipoVisitante.puntos + 3);
+        public void jugarPartido() {
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 3; j++) {
+                    generarGolesLocales();
+                    generarGolesVisitante();
                 }
+            }
+            jugado = true;
+            if (golesLocal > golesVisitante) {
+                equipoLocal.setPuntos(equipoLocal.puntos + 3);
+            } else if (golesVisitante > golesLocal) {
+                equipoVisitante.setPuntos(equipoLocal.puntos + 3);
+            } else {
+                equipoLocal.setPuntos(equipoLocal.puntos + 1);
+                equipoVisitante.setPuntos(equipoLocal.puntos + 1);
             }
         }
 
