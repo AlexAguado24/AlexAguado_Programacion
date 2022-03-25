@@ -2,14 +2,14 @@ public class Entrada {
 
     public static void main(String[] args) {
 
-        SupermercadoEspecifico<Alimento> supermercadoAlimentos = new SupermercadoEspecifico<Alimento>();
-        supermercadoAlimentos.registrarElemento(new Carne("media","españa",50,100));
+        SupermercadoEspecifico<Carne> supermercadoAlimentos = new SupermercadoEspecifico();
+        //supermercadoAlimentos.registrarElemento(new Carne("media","españa",50,100));
 
 
-        supermercadoAlimentos.mostrarPreciosFinales();
+        //supermercadoAlimentos.mostrarPreciosFinales();
 
-        SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico<Mueble>();
-        supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",100,20));
+        SupermercadoEspecifico<Mesa> supermercadoMuebles = new SupermercadoEspecifico();
+        //supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",100,20));
 
 
     }

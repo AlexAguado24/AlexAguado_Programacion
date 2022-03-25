@@ -17,10 +17,9 @@ public class Alimento<T,S> implements Inventariable<S>{
     }
 
     @Override
-    public S calcularPrecio() {
+    public void calcularPrecio() {
         this.precio += precio * (int)Inventariable.ivaAlimentos;
         System.out.println(precio);
-        return null;
     }
 
     public String getCalidad() {
