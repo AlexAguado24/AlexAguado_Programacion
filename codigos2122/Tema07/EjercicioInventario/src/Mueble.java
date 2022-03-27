@@ -1,4 +1,4 @@
-public class Mueble<V,S> implements Inventariable<V,S>{
+public class Mueble<V> implements Inventariable{
 
     protected String material, peso;
     protected int precio;
@@ -17,10 +17,8 @@ public class Mueble<V,S> implements Inventariable<V,S>{
     }
 
     @Override
-    public S calcularPrecio() {
+    public void calcularPrecio() {
         this.precio += precio * (int)Inventariable.ivaMuebles;
-        System.out.println(precio);
-        return null;
     }
 
     public String getMaterial() {

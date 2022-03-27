@@ -17,11 +17,13 @@ public class SupermercadoEspecifico<V> {
         for (V item : listaCosas) {
             if (item instanceof Alimento) {
                 precioFinal += ((Alimento) item).getPrecio();
+
             }
             if (item instanceof Mueble) {
                 precioFinal += ((Mueble) item).getPrecio();
             }
         }
+        System.out.printf("El precio final es de %d%n",precioFinal);
     }
 
     public ArrayList<V> getListaCosas() {
