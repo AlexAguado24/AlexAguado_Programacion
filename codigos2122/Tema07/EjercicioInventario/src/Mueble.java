@@ -1,4 +1,4 @@
-public class Mueble<T,S> implements Inventariable<S>{
+public class Mueble<V,S> implements Inventariable<V,S>{
 
     protected String material, peso;
     protected int precio;

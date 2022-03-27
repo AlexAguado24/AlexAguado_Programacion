@@ -1,4 +1,4 @@
-public interface Inventariable<S>{
+public interface Inventariable<V,S>{
 
     double ivaMuebles = 1.21;
     double ivaAlimentos = 1.10;

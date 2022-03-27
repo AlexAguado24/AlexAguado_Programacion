@@ -11,6 +11,12 @@ public class Entrada {
         SupermercadoEspecifico<Mesa> supermercadoMuebles = new SupermercadoEspecifico();
         //supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",100,20));
 
+<<<<<<< Updated upstream
+=======
+
+        SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico<Mueble>();
+>>>>>>> Stashed changes
+
 
     }
 

@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class SupermercadoEspecifico<T> {
+public class SupermercadoEspecifico<V> {
 
-    private ArrayList<T> listaCosas;
+    private ArrayList<V> listaCosas;
 
     public SupermercadoEspecifico() {
         this.listaCosas = new ArrayList();
     }
 
-    public void registrarElemento(T elemento) {
+    public void registrarElemento(V elemento) {
         listaCosas.add(elemento);
     }
 
     public void mostrarPreciosFinales() {
         int precioFinal = 0;
-        for (T item : listaCosas) {
+        for (V item : listaCosas) {
             if (item instanceof Alimento) {
                 precioFinal += ((Alimento) item).getPrecio();
             }
@@ -24,11 +24,11 @@ public class SupermercadoEspecifico<T> {
         }
     }
 
-    public ArrayList<T> getListaCosas() {
+    public ArrayList<V> getListaCosas() {
         return listaCosas;
     }
 
-    public void setListaCosas(ArrayList<T> listaCosas) {
+    public void setListaCosas(ArrayList<V> listaCosas) {
         this.listaCosas = listaCosas;
     }
 }

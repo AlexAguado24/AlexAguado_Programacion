@@ -1,4 +1,4 @@
-public class Alimento<T,S> implements Inventariable<S>{
+public class Alimento<V,S> implements Inventariable<V,S>{
 
     protected String calidad, origen;
     protected int precio;
