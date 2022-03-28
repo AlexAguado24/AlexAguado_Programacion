@@ -1,7 +1,7 @@
 public interface Inventariable<V>{
 
-    double ivaMuebles = 0.21;
-    double ivaAlimentos = 0.10;
+    int ivaMuebles = 21;
+    int ivaAlimentos = 10;
 
     void calcularPrecio();
 

@@ -18,7 +18,7 @@ public class Mueble<V> implements Inventariable{
 
     @Override
     public void calcularPrecio() {
-        this.precio += precio * (int)Inventariable.ivaMuebles;
+        this.precio += precio * Inventariable.ivaMuebles;
     }
 
     public String getMaterial() {

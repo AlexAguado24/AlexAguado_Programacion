@@ -11,13 +11,13 @@ public class Entrada {
 
         supermercadoAlimentos.mostrarPreciosFinales();
 
-        SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico();
+        /*SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico();
         supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",100,20));
         supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",150,20));
         supermercadoMuebles.registrarElemento(new Silla("madera","35kg",89,20));
         supermercadoMuebles.registrarElemento(new Silla("madera","35kg",41,20));
 
-        supermercadoMuebles.mostrarPreciosFinales();
+        supermercadoMuebles.mostrarPreciosFinales();*/
     }
 
 }
