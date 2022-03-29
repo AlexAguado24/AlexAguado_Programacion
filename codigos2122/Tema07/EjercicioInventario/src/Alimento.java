@@ -1,13 +1,12 @@
-public class Alimento<V> implements Inventariable{
+public abstract class Alimento implements Inventariable{
 
     protected String calidad, origen;
-    protected int precio;
+    protected double precio;
 
-    public Alimento (String calidad,String origen,int precio) {
+    public Alimento (String calidad,String origen,double precio) {
         this.calidad = calidad;
         this.origen = origen;
         this.precio = precio;
-        calcularPrecio();
     }
 
     public void mostrarDatos () {
@@ -18,9 +17,8 @@ public class Alimento<V> implements Inventariable{
 
     @Override
     public void calcularPrecio() {
-        System.out.println(precio);
-        this.precio += precio * Inventariable.ivaAlimentos;
-        System.out.println(precio);
+        setPrecio(this.precio+(this.precio*Inventariable.ivaAlimentos));
+        System.out.println("El precio es de "+precio);
     }
 
     public String getCalidad() {
@@ -39,11 +37,11 @@ public class Alimento<V> implements Inventariable{
         this.origen = origen;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 }

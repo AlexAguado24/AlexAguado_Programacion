@@ -1,13 +1,12 @@
-public class Mueble<V> implements Inventariable{
+public abstract class Mueble implements Inventariable{
 
     protected String material, peso;
-    protected int precio;
+    protected double precio;
 
-    public Mueble(String material, String peso, int precio) {
+    public Mueble(String material, String peso, double precio) {
         this.material = material;
         this.peso = peso;
         this.precio = precio;
-        calcularPrecio();
     }
 
     public void mostrarDatos(){
@@ -18,7 +17,8 @@ public class Mueble<V> implements Inventariable{
 
     @Override
     public void calcularPrecio() {
-        this.precio += precio * Inventariable.ivaMuebles;
+        setPrecio(this.precio+(this.precio*Inventariable.ivaMuebles));
+        System.out.println("El precio es de "+precio);
     }
 
     public String getMaterial() {
@@ -37,11 +37,11 @@ public class Mueble<V> implements Inventariable{
         this.peso = peso;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 }

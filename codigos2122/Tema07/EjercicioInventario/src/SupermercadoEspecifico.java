@@ -12,18 +12,27 @@ public class SupermercadoEspecifico<V> {
         listaCosas.add(elemento);
     }
 
+    public void listarDatos() {
+        for (V item : listaCosas) {
+            if (item instanceof Alimento) {
+                ((Alimento) item).mostrarDatos();
+            } else if (item instanceof Mueble) {
+                ((Mueble) item).mostrarDatos();
+            }
+        }
+    }
+
     public void mostrarPreciosFinales() {
         int precioFinal = 0;
         for (V item : listaCosas) {
             if (item instanceof Alimento) {
                 precioFinal += ((Alimento) item).getPrecio();
 
-            }
-            if (item instanceof Mueble) {
+            } else if (item instanceof Mueble) {
                 precioFinal += ((Mueble) item).getPrecio();
             }
         }
-        System.out.printf("El precio final es de %d%n",precioFinal);
+        System.out.printf("El precio final es de %d%n", precioFinal);
     }
 
     public ArrayList<V> getListaCosas() {

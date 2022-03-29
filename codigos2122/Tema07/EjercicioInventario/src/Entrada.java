@@ -11,13 +11,27 @@ public class Entrada {
 
         supermercadoAlimentos.mostrarPreciosFinales();
 
-        /*SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico();
+
+        Carne filete = new Carne("Galicia", "superior",50,500);
+        filete.calcularPrecio();
+
+        Silla silla = new Silla("Madera", "80",40,90);
+        silla.calcularPrecio();
+
+        SupermercadoEspecifico<Mueble> supermercadoMuebles = new SupermercadoEspecifico();
         supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",100,20));
         supermercadoMuebles.registrarElemento(new Mesa("madera","35kg",150,20));
         supermercadoMuebles.registrarElemento(new Silla("madera","35kg",89,20));
         supermercadoMuebles.registrarElemento(new Silla("madera","35kg",41,20));
 
-        supermercadoMuebles.mostrarPreciosFinales();*/
+        /*supermercadoMuebles.mostrarPreciosFinales();
+        supermercadoAlimentos.listarDatos();
+        supermercadoMuebles.listarDatos();*/
+
+        SupermercadoEspecifico<Inventariable> supermercadoGenerico = new SupermercadoEspecifico<>();
+        supermercadoGenerico.registrarElemento(filete);
+        supermercadoGenerico.registrarElemento(silla);
+
     }
 
 }

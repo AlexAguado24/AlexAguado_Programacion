@@ -1,8 +1,8 @@
-public class Mesa extends Mueble implements Inventariable{
+public final class Mesa extends Mueble{
 
     private int capacidad;
 
-    public Mesa(String material, String peso, int precio, int capacidad) {
+    public Mesa(String material, String peso, double precio, int capacidad) {
         super(material, peso, precio);
         this.capacidad = capacidad;
     }

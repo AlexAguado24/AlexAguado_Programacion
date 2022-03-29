@@ -1,8 +1,8 @@
-public class Silla extends Mueble implements Inventariable{
+public final class Silla extends Mueble{
 
     private int patas;
 
-    public Silla(String material, String peso, int precio, int patas) {
+    public Silla(String material, String peso, double precio, int patas) {
         super(material, peso, precio);
         this.patas = patas;
     }
