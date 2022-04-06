@@ -60,7 +60,7 @@ public class FicherosController {
                 }
         }*/
         int opcion = 0;
-        File file = new File("C:\\Users\\Usuario DAM1\\Desktop\\Ficheros");
+        File file = new File("C:\\Users\\Usuario\\Desktop\\Ficheros");
         File[] ficherosParent = file.listFiles();
 
         System.out.println("Imprimiendo " + file.getName());
@@ -86,14 +86,35 @@ public class FicherosController {
             System.out.println("Opcion incorrecta");
         }*/
         if (opcion >= 0 && opcion < ficherosParent.length) {
+            listarChild(ficherosParent[opcion]);
+        } else if (opcion == 4) {
+            System.out.println(file.getParent());
 
         } else {
             System.out.println("Opcion incorrecta");
         }
     }
-    public void listarChild (File child) {
+
+    public void listarChild(File child) {
         int contador = 0;
+        int opcion = 0;
         File[] ficherosChild = child.listFiles();
-        
+        for (File childitem : ficherosChild) {
+            System.out.println(contador + " - " + childitem);
+            contador++;
+        }
+        System.out.println("Que opcion quieres elegir");
+        opcion = in.nextInt();
+        if (opcion >= 0 && opcion < ficherosChild.length) {
+            if (ficherosChild[opcion].isDirectory()) {
+                listarChild(ficherosChild[opcion]);
+            } else {
+                System.out.println("Error, es un fichero");
+            }
+        } else if (opcion == 4)  {
+            System.out.println(child.getParent());
+        } else {
+            System.out.println("Opcion incorrecta");
+        }
     }
 }
