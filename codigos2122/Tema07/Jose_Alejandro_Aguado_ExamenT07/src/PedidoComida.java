@@ -1,4 +1,4 @@
-public final class PedidoComida extends ConsumicionGenerica implements Constantes{
+public final class PedidoComida extends ConsumicionGenerica {
 
     private Enum<Comidas> comida;
 
@@ -7,6 +7,7 @@ public final class PedidoComida extends ConsumicionGenerica implements Constante
     public PedidoComida(double precio, int numConsumiciones, Enum<Comidas> comida) {
         super(precio, numConsumiciones);
         this.comida = comida;
+
     }
 
     @Override
@@ -18,6 +19,7 @@ public final class PedidoComida extends ConsumicionGenerica implements Constante
     public void verFactura () {
         System.out.println("Los datos de la factura son " +
                 "NºConsumiciones: "+ getNumConsumiciones()+
+                "Comida: " + comida.name()+
                 "Precio: "+ getPrecio()+
                 "CIF: "+Constantes.CIF);
     }

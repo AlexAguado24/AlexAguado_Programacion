@@ -76,12 +76,68 @@ public class FicherosControllerPractica {
         String[] letras = lineaEscribir.split("");
 
         for (String letra : letras) {
-           int codigo = (byte)(letra.charAt(0));
-           int codigoCifrado = codigo * 2;
-           char caracterCifrado =(char) codigoCifrado;
+            int codigo = (byte) (letra.charAt(0));
+            int codigoCifrado = codigo * 2;
+            char caracterCifrado = (char) codigoCifrado;
             System.out.println(caracterCifrado);
         }
     }
 
+    public void escribirFicheroCompleto(File file) {
+
+        FileWriter fileWriter = null;
+        PrintWriter printWriter = null;
+        try {
+            fileWriter = new FileWriter(file);
+            printWriter = new PrintWriter(fileWriter);
+            printWriter.println("Esto es un ejemplo");
+            printWriter.println("Esto es un ejemplo de linea paralela");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (printWriter != null) {
+                printWriter.close();
+            }
+        }
+    }
+
+    public void escribirConsola(File file) {
+        FileWriter fileWriter = null;
+        PrintWriter printWriter = null;
+        String linea = "";
+        int  opcion = 0;
+        try {
+            fileWriter = new FileWriter(file);
+            printWriter = new PrintWriter(fileWriter);
+            do {
+                System.out.println("Escribe nueva Frase");
+                printWriter.println(linea = in.next());
+                System.out.println("¿Quieres continuar escribiendo? (0)no/ (1)si");
+                opcion = in.nextInt();
+            } while (opcion != 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (printWriter != null) {
+                printWriter.close();
+            }
+        }
+
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String lectura = null;
+            String lecturaCompleta = "";
+            while ((lectura=bufferedReader.readLine()) != null){
+                System.out.println(lectura);
+                lecturaCompleta += lectura + " ";
+            }
+            System.out.println("La lectura completa es: "+ lecturaCompleta);
+        } catch (IOException e) {
+
+        }
+    }
 
 }

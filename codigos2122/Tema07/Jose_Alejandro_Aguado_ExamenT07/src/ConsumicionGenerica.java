@@ -8,6 +8,7 @@ public abstract class ConsumicionGenerica<T> {
     public ConsumicionGenerica(double precio, int numConsumiciones) {
         this.precio = precio;
         this.numConsumiciones = numConsumiciones;
+        calcularPrecioReal();
     }
 
     public abstract void calcularPrecioReal();

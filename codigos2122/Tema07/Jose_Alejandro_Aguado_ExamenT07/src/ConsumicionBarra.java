@@ -1,12 +1,13 @@
 public final class ConsumicionBarra extends ConsumicionGenerica{
 
-    private Enum<Bebidas> bebidas;
+    Bebidas tipoBebidas;
 
     public ConsumicionBarra() {}
 
-    public ConsumicionBarra(double precio, int numConsumiciones, Enum<Bebidas> bebidas) {
+    public ConsumicionBarra(double precio, int numConsumiciones, Bebidas bebidas) {
         super(precio, numConsumiciones);
-        this.bebidas = bebidas;
+        this.tipoBebidas = bebidas;
+
     }
 
     @Override
@@ -18,15 +19,16 @@ public final class ConsumicionBarra extends ConsumicionGenerica{
     public void verFactura() {
         System.out.println("Los datos de la factura son " +
                 "NºConsumiciones: "+ getNumConsumiciones()+
+                "Bebidas: "+ tipoBebidas.name()+
                 "Precio: "+ getPrecio()+
                 "CIF: "+Constantes.CIF);
     }
 
-    public Enum<Bebidas> getBebidas() {
-        return bebidas;
+    public Enum<Bebidas> getTipoBebidas() {
+        return tipoBebidas;
     }
 
-    public void setBebidas(Enum<Bebidas> bebidas) {
-        this.bebidas = bebidas;
+    public void setTipoBebidas(Bebidas tipoBebidas) {
+        this.tipoBebidas = tipoBebidas;
     }
 }
