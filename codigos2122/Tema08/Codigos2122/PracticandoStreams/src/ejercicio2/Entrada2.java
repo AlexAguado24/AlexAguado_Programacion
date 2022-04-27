@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Entrada2 {
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\Usuario\\Desktop\\Usuarios\\texto.txt");
+        File file = new File("src\\Usuarios\\texto.txt");
         BufferedReader bufferedReader = null;
         String linea = "", textoCompleto = "";
 
