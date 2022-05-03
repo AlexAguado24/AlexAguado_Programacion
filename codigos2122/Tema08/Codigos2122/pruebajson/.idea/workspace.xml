@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Asignatura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Profesor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asignaturas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/JSONControllers.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/src/main/java/controller/JSONController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/JSONController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/src/main/java/model/Conocimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Conocimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JSONControllers/src/main/resources/persona.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/persona.json" afterDir="false" />
-    </list>
+    <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
