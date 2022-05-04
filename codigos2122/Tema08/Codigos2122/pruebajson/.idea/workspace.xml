@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FicherosBinarios/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosBinarios/src/EntradaEjercicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/Entrada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/controller/BinariosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/controller/BinariosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/src/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/src/Entrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/src/controller/BinariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/src/controller/BinariosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
