@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/controller/JSONController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/resources/Persona.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/model/Conocimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosJSON/src/main/java/controller/JSONController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/controller/JSONController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
