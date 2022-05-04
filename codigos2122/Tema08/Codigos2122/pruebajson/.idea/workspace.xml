@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/controller/JSONController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/resources/Usuarios.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FicherosBinarios/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FicherosBinarios/src/EntradaEjercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/Entrada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/controller/BinariosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/controller/BinariosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/out/production/FicherosBinarios/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/src/Entrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/src/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosBinarios/src/controller/BinariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosBinarios/src/controller/BinariosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +34,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/Usuario DAM1/Documents/GitHub/AlexAguado_Programacion/codigos2122/Tema08/Codigos2122/Ej_JSON1",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario DAM1\Documents\GitHub\AlexAguado_Programacion\codigos2122\Tema08\Codigos2122\pruebajson\src\main\resources" />
