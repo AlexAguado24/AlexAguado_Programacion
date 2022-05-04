@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/model/Asignaturas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/model/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosJSON/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FicherosJSON/src/main/java/controller/JSONController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/java/controller/JSONController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FicherosJSON/src/main/resources/asignatura.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/src/main/resources/asignatura.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosJSON/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FicherosJSON/target/classes/controller/JSONController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FicherosJSON/target/classes/controller/JSONController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,6 +1,7 @@
 package controller;
 
 import com.google.gson.Gson;
+import model.Asignaturas;
 import model.Conocimiento;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -81,7 +82,13 @@ public class JSONController {
 
             JSONArray asignaturas = jsonAsignaturas.getJSONArray("asignaturas");
 
-            
+            for (int i = 0; i < asignaturas.length(); i++) {
+                JSONObject asignaturaJSON = asignaturas.getJSONObject(i);
+                Gson gson = new Gson();
+                Asignaturas asignatura = gson.fromJson(asignaturaJSON.toString(),Asignaturas.class);
+                caracteristicasAsignatura(asignatura);
+            }
+
 
 
         } catch (IOException e) {
@@ -97,5 +104,11 @@ public class JSONController {
         }
 
     }
+    public void caracteristicasAsignatura (Asignaturas asignaturas) {
+        System.out.println(asignaturas.getCiclo());
+        System.out.println(asignaturas.getCurso());
+    }
+    public void mostrarAsignaturas () {
 
+    }
 }
