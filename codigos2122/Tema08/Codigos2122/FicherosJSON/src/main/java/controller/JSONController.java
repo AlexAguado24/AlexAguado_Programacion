@@ -160,24 +160,23 @@ public class JSONController {
         try {
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            BufferedReader buffer = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             StringBuffer stringBuffer = new StringBuffer();
             String linea = null;
 
-            while ((linea = bufferedReader.readLine())!= null){
+            while ((linea = buffer.readLine())!= null){
                 stringBuffer.append(linea);
             }
-
             String lectura = stringBuffer.toString();
+
             JSONObject lecturaJSON = new JSONObject(lectura);
             JSONArray arrayResultados = lecturaJSON.getJSONArray("results");
             for (int i = 0; i < arrayResultados.length(); i++) {
                 JSONObject objetoResultado = arrayResultados.getJSONObject(0);
                 String mail = objetoResultado.getString("email");
+                System.out.println(mail);
             }
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

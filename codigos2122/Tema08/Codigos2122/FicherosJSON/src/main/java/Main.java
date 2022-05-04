@@ -14,6 +14,6 @@ public class Main {
         System.out.println("Indica curso");
         int curso = in.nextInt();*/
 
-        controller.lecturaJSONAPI(10);
+        controller.lecturaUsers();
     }
 }
