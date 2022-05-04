@@ -9,9 +9,11 @@ public class Main {
         Scanner in = new Scanner(System.in);
         //controller.leerJSONAsignaturas();
 
-        System.out.println("Indica ciclo");
+        /*System.out.println("Indica ciclo");
         String ciclo = in.next();
         System.out.println("Indica curso");
-        int curso = in.nextInt();
+        int curso = in.nextInt();*/
+
+        controller.lecturaJSONAPI(10);
     }
 }
