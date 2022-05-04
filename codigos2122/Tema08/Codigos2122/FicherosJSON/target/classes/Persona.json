@@ -1,0 +1,34 @@
+{
+  "nombre": "Alex",
+  "apellidos": "Aguado",
+  "edad": 26,
+  "hobbies": [
+    "musica",
+    "deporte",
+    "cine",
+    "informatica"
+  ],
+  "conocimientos": [
+    {
+      "concepto": "programacion",
+      "esperiencia": 1,
+      "detalle": [
+        "java",
+        "html",
+        "css",
+        "javaScript",
+        "mySql",
+        "powershell"
+      ]
+    },
+    {
+      "concepto": "3D",
+      "esperiencia": 0,
+      "detalle": [
+        "maya",
+        "3dmax",
+        "blender"
+      ]
+    }
+  ]
+}
