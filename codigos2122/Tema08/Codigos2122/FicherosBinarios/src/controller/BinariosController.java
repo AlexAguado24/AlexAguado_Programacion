@@ -3,19 +3,28 @@ package controller;
 import model.Usuario;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class BinariosController {
 
+    private ArrayList<Usuario> listaUsuarios;
+
+    public BinariosController(){
+        listaUsuarios = new ArrayList<>();
+    }
+
+    public void addUsuario (String nombre, String apellido, String pass){
+        this.listaUsuarios.add(new Usuario(nombre,apellido,pass));
+    }
+
     public void escribirBinario(){
-        File file = new File("src/resources/objetos.bin");
+        File file = new File("src/resources/usuarios.bin");
         //Cerrarlo!!!
         ObjectOutputStream oos = null;
 
         try {
             oos = new ObjectOutputStream(new FileOutputStream(file));
-            oos.writeObject(new Usuario("Alex","Aguado","12345A"));
-            oos.writeObject(new Usuario("Mario","Herrera","234567"));
-            oos.writeObject(new Usuario("jorgito","gonzalez","34568d"));
+            oos.writeObject(listaUsuarios);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -28,17 +37,20 @@ public class BinariosController {
             }
         }
     }
-    public void lecturaBinario(){
-        File file = new File("src/resources/objetos.bin");
+    public void lecturaBinario(boolean lectura){
+        File file = new File("src/resources/usuarios1.bin");
 
-        //Cerrarlo!!!
         ObjectInputStream ois = null;
-        Usuario usuario = null;
         try {
             ois = new ObjectInputStream(new FileInputStream(file));
+            Usuario item = null;
             try {
-                while ((usuario = (Usuario) ois.readObject()) != null) {
-                    System.out.println(usuario.toString());
+                if (!lectura) {
+                    listaUsuarios = (ArrayList<Usuario>) ois.readObject();
+                } else {
+                    while ((item = (Usuario) ois.readObject())!=null){
+                        mostrarDatos(item);
+                    }
                 }
             } catch (EOFException e){
                 System.out.println("Fichero terminado");
@@ -55,5 +67,15 @@ public class BinariosController {
             }
         }
     }
+    public void mostrarDatos(Usuario usuario){
+        System.out.println("Nombre: "+ usuario.getNombre());
+        System.out.println("Apellido: "+ usuario.getApellido());
+    }
+    public void existeFichero(){
+        File file = new File("src/resources/usuarios1.bin");
 
+        if (file.exists()) {
+            lecturaBinario(false);
+        }
+    }
 }
