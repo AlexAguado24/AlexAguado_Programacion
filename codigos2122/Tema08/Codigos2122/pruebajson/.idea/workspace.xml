@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/controller/JSONController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/java/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Ej_JSON1/src/main/resources/Usuarios.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="12daf3c0-5da6-4a1a-b676-02765669dbac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
