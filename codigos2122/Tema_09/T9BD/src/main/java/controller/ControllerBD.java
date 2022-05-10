@@ -3,16 +3,15 @@ package controller;
 import database.SchemaDB;
 import model.Usuario;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ControllerBD {
 
     private Connection conn;
     //no comprueba tipos
     private Statement statement;
+
+    private PreparedStatement preparedStatement;
 
     private void getConnection() {
         String host = SchemaDB.URL_SERVER;
@@ -96,7 +95,27 @@ public class ControllerBD {
     public void insertarAlumnoPrepare (){
         String nombre = "Borja";
         String apellido = "Martin";
-        String edad = "Borja";
+        String edad = "38";
+
+        String query = "INSERT INTO alumnos (nombre, apellido, edad) VALUES (?,?,?)";
+
+        try {
+            getConnection();
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1,nombre);
+            preparedStatement.setString(2,apellido);
+            preparedStatement.setString(3,edad);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            closeConnection();
+        }
 
     }
 }
