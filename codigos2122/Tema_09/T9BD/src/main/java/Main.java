@@ -16,6 +16,8 @@ public class Main {
         int edad, opc = 0;
         String nombre, apellido;
 
+        controllerBD.
+
         /*System.out.println("Quieres añadir un usuario? (1= si/ 0 = no)");
         opc = in.nextInt();
 
