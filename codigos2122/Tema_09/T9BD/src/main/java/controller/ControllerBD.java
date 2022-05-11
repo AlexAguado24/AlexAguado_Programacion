@@ -118,4 +118,26 @@ public class ControllerBD {
         }
 
     }
+
+    public void actualizarEdad(String nombre, int edad){
+        String query = "DELETE FROM %s WHERE %s < ?";
+
+        getConnection();
+        try {
+            preparedStatement = conn.prepareStatement(String.format(query,SchemaDB.TAB_ALU,
+                    SchemaDB.COL_EDAD));
+            preparedStatement.setInt(1,edad);
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("estos son los cambios afectados "+rows);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            closeConnection();
+        }
+    }
 }
