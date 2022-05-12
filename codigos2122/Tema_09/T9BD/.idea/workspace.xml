@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeca7021-b1ae-4d22-a313-aa9cb0047eb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/Servidores.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Servidores/Servidores/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servidores/Servidores/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ControllerBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servidores/Servidores/src/main/java/controller/ControllerBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/SchemaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servidores/Servidores/src/main/java/database/SchemaDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Servidores/Servidores/src/main/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ControllerBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ControllerBD.class" afterDir="false" />
-    </list>
+    <list default="true" id="aeca7021-b1ae-4d22-a313-aa9cb0047eb3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,11 +32,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
-  }
-}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
