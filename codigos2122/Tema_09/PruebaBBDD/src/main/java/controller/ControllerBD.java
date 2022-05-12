@@ -1,9 +1,10 @@
-package controller;
+package main.java.controller;
 
 import database.SchemaDB;
 import model.Usuario;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class ControllerBD {
 
@@ -13,6 +14,8 @@ public class ControllerBD {
 
     private PreparedStatement preparedStatement;
 
+    private ResultSet resultSet;
+
     private void getConnection() {
         String host = SchemaDB.URL_SERVER;
         String dtbs = SchemaDB.DB_NAME;
@@ -20,13 +23,16 @@ public class ControllerBD {
         String pass = "admin";
 
 
-        String newConnectionURL = "jdvc:mysql://" + host + "/" + dtbs + "?" + "user=" + user + "&password=" + pass;
+        String newConnectionURL = "jdbc:mysql://" + host + "/" + dtbs + "?" + "user=" + user + "&password=" + pass;
 
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(newConnectionURL);
-            System.out.println(conn.getCatalog());
-        } catch (SQLException e) {
+            //System.out.println(conn.getCatalog());
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
+            //System.out.println(e.getMessage());
+
         }
     }
 
@@ -136,6 +142,41 @@ public class ControllerBD {
                 preparedStatement.close();
             } catch (SQLException e) {
                 e.printStackTrace();
+            }
+            closeConnection();
+        }
+    }
+
+    public void getResultados(){
+        ArrayList<Usuario> alumnos = new ArrayList<>();
+        getConnection();
+        try {
+            statement = conn.createStatement();
+            String query = "SELECT * FROM "+SchemaDB.TAB_ALU;
+            resultSet = statement.executeQuery(query);
+            /*resultSet.next();
+            String nombre = resultSet.getString(SchemaDB.COL_NOMBRE);
+            String apellido = resultSet.getString(SchemaDB.COL_APELLIDO);
+            int edad = resultSet.getInt(SchemaDB.COL_EDAD);
+            int id = resultSet.getInt(SchemaDB.COL_ID);
+
+            System.out.println(nombre);
+            System.out.println(apellido);
+            System.out.println(edad);
+            System.out.println(id);*/
+            resultSet.last();
+
+            while (resultSet.next()){
+
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
             closeConnection();
         }

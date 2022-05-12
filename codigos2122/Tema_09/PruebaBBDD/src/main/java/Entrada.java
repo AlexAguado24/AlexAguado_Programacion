@@ -1,13 +1,10 @@
-import controller.ControllerBD;
-import database.SchemaDB;
-import model.Usuario;
+package main.java;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import main.java.controller.ControllerBD;
+
 import java.util.Scanner;
 
-public class Main {
+public class Entrada {
     public static void main(String[] args) {
 
         ControllerBD controllerBD = new ControllerBD();
@@ -16,7 +13,9 @@ public class Main {
         int edad, opc = 0;
         String nombre, apellido;
 
-        controllerBD.actualizarEdad("Borja",40);
+        //controllerBD.actualizarEdad("Borja",40);
+
+        controllerBD.getResultados();
 
         /*System.out.println("Quieres añadir un usuario? (1= si/ 0 = no)");
         opc = in.nextInt();
