@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="667eaefd-43b8-4469-a6aa-7b7dae2eca37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ControllerBD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Alumno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/libraries/java.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/PruebaBBDD.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/database/SchemaDB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/main/java/Entrada.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/model/Usuario.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/database/SchemaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/Entrada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/controller/ControllerBD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/database/SchemaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/Entrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/controller/ControllerBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/controller/ControllerBD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/database/SchemaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/SchemaDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../T9BD/target/classes/controller/ControllerBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/target/classes/controller/ControllerBD.class" afterDir="false" />
-    </list>
+    <list default="true" id="667eaefd-43b8-4469-a6aa-7b7dae2eca37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +35,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Usuario DAM1/Documents/GitHub/AlexAguado_Programacion/codigos2122/Tema_09"
   }
 }]]></component>
   <component name="RecentsManager">

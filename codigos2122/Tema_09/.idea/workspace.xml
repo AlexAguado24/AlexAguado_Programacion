@@ -2,61 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb03080-cbdb-4b8f-ac4b-0455a640d3e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/src/main/java/controller/ControllerBD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/src/main/java/database/SchemaDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/src/main/java/model/Alumno.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/target/classes/ControllerBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/target/classes/database/SchemaDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/libraries/java.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/PruebaBBDD.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/out/production/PruebaBBDD/database/SchemaDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/out/production/PruebaBBDD/main/java/Entrada.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/out/production/PruebaBBDD/main/java/controller/ControllerBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/out/production/PruebaBBDD/model/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/src/main/java/Entrada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/src/main/java/controller/ControllerBD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/src/main/java/database/SchemaDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaBBDD/src/main/java/model/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/src/java/Entrada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/src/java/controller/ControllerBD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/src/java/database/SchemaDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/src/java/model/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/target/classes/controller/ControllerBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/target/classes/database/SchemaDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Servidores/Servidores/target/classes/model/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/target/classes/controller/ControllerBD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/target/classes/database/SchemaDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/T9BD/target/classes/model/Usuario.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDatos/untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDatos/untitled/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDatos/untitled/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDatos/BaseDatos/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +21,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.jdks" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Usuario DAM1/Documents/GitHub/AlexAguado_Programacion/codigos2122/Tema_09"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
