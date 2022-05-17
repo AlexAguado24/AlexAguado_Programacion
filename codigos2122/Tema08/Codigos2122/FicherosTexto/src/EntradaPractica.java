@@ -19,7 +19,7 @@ public class EntradaPractica {
         //ficherosControllerPractica.escrituraFichero(file2);
         //ficherosControllerPractica.cifrarLinea(file2);
         //ficherosControllerPractica.escribirFicheroCompleto(file3);
-        ficherosControllerPractica.escribirConsola(file4);
+        //ficherosControllerPractica.escribirConsola(file4);
 
 
     }

@@ -1,11 +1,12 @@
 package controller;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class FicherosController {
     Scanner in = new Scanner(System.in);
+
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     /*public void getFileInfo(File file) {
         System.out.println("Informacion de fichero");
@@ -118,5 +119,106 @@ public class FicherosController {
         } else {
             System.out.println("Opcion incorrecta");
         }
+    }
+
+    public void escrituraFichero (File file){
+
+        FileWriter fileWriter = null;
+
+        String lineaEscribir = "Esto es un ejemplo de una linea a escribir dentro del fichero";
+
+        try {
+            fileWriter = new FileWriter(file);
+            fileWriter.write(101);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (fileWriter != null) {
+                    fileWriter.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void escribirFicheroCompleto(File file){
+
+        PrintWriter printWriter = null;
+
+        try {
+            printWriter = new PrintWriter(new FileWriter(file));
+            printWriter.println("Esto es una linea");
+            printWriter.println("Esto es una linea nueva");
+            printWriter.println("Esto es un ejemplo de 3 lineas");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (printWriter != null) {
+                printWriter.close();
+            }
+        }
+
+
+    }
+
+    public void escribirEnFichero (File file) {
+
+        int opcion;
+        String lineaEscribir = "";
+
+        FileWriter fileWriter = null;
+        PrintWriter printWriter = null;
+
+
+
+        do{
+
+            try {
+                System.out.println("Introduce linea");
+                lineaEscribir = bufferedReader.readLine();
+                //System.out.println(lineaEscribir);
+                fileWriter = new FileWriter(file,true);
+                printWriter = new PrintWriter(fileWriter);
+                printWriter.println(lineaEscribir);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (printWriter != null) {
+                    printWriter.close();
+                }
+            }
+
+            System.out.println("quieres escribir otra linea? (1= si / 0 = no)");
+            opcion = in.nextInt();
+        }while (opcion != 0);
+
+        BufferedReader bufferedReader = null;
+
+        try {
+            bufferedReader = new BufferedReader(new FileReader(file));
+            String lectura = "";
+            String lecturaCompleta;
+            StringBuffer lineaCompleta = new StringBuffer();
+            while ((lectura = bufferedReader.readLine())!=null){
+                lineaCompleta.append(lectura+"\n");
+            }
+            //guardar el buffer en lecturaCompleta es opcional por si se quiere tratar
+            lecturaCompleta = lineaCompleta.toString();
+            System.out.println(lecturaCompleta);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 }
