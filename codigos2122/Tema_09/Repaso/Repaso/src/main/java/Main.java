@@ -7,11 +7,12 @@ public class Main {
 
 
         ControllerBD controllerBD = new ControllerBD();
-
-        controllerBD.insertarUsuarios();
-
-        //controllerBD.selectSueldos(1000);
-
         //controllerBD.insertarPerfiles();
+        //controllerBD.insertarUsuarios();
+        //controllerBD.selectSueldos(1000);
+        //controllerBD.sueldoAlemania();
+        //controllerBD.sueldoResto();
+
+
     }
 }
