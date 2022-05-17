@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="667eaefd-43b8-4469-a6aa-7b7dae2eca37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ControllerBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Alumno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/libraries/java.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/PruebaBBDD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/database/SchemaDB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/main/java/Entrada.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/out/production/PruebaBBDD/model/Usuario.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/database/SchemaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/Entrada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/controller/ControllerBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/database/SchemaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Servidores/Servidores/src/java/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/controller/ControllerBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/controller/ControllerBD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/database/SchemaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/SchemaDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/src/main/java/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PruebaBBDD/src/main/java/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../T9BD/target/classes/controller/ControllerBD.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../T9BD/target/classes/controller/ControllerBD.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="293YXAcp52TJHRhbvw9paODtXfn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="database" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="BaseDatos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="667eaefd-43b8-4469-a6aa-7b7dae2eca37" name="Changes" comment="" />
+      <created>1652343299043</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652343299043</updated>
+    </task>
+    <servers />
+  </component>
+</project>
