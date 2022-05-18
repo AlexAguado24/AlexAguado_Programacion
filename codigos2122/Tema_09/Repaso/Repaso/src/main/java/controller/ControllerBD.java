@@ -3,10 +3,11 @@ package controller;
 import database.SchemeDB;
 import model.Usuario;
 
-import javax.xml.validation.Schema;
 import java.sql.*;
 
 public class ControllerBD {
+
+
 
     private Connection conn;
     private Statement statement;

@@ -26,10 +26,17 @@ public class Main {
             continuar = scanner.next();
         }while (continuar.equalsIgnoreCase("s"));*/
         //controllerBD.insertarAlumnoPrepare();
-        System.out.println("Indica el nombre del alumno");
+        /*System.out.println("Indica el nombre del alumno");
         nombre = scanner.next();
         System.out.println("Indica la nueva edad");
         edad = scanner.nextInt();
-        controllerBD.modificartEdad(nombre,edad);
+        controllerBD.modificartEdad(nombre,edad);*/
+        //controllerBD.borrarAlumno();
+
+        controllerBD.getResultados();
+
+
+
+
     }
 }

@@ -6,8 +6,8 @@ public interface SchemeDB {
     String dtbs = "empresa";
     String user = "root";
     String pass = "admin";
-    String url = "jdbc:mysql://" + SchemeDB.host + "/" + SchemeDB.dtbs
-            + "?" + "user=" + SchemeDB.user + "&password=" + SchemeDB.pass;
+    String url = "jdbc:mysql://" + host + "/" + dtbs
+            + "?" + "user=" + user + "&password=" + pass;
 
     String TAB_PERFILES = "perfiles";
     String TAB_USUARIOS = "usuario";
