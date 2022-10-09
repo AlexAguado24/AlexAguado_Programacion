@@ -8,9 +8,6 @@ public class Entrada {
         Scanner in = new Scanner(System.in);
         int opcion = -1;
 
-
-
-
         do {
 
         }while (opcion == 0);
